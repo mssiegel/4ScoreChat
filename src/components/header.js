@@ -1,42 +1,35 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
+import logo from "../images/wizard-hat.jpg"
+import "./header.css"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+
+const Header = () => (
+  <>
+  <header>
+    <div className="nav-container">
+      <h1 className="nav-title">
+        <Link to="/" className="nav-title-link">
+          <img id="nav-wizard-hat" src={logo} alt="4ScoreChat's logo"/>4Score Chat 
         </Link>
-      </h1>
+      </h1>     
+
+      <input type="checkbox" id="nav-toggle" className="nav-toggle"/>
+      <nav>
+        <ul>
+          <li><Link to="/examples/">Examples</Link></li>
+          <li><Link to="/guide/">Guide</Link></li>
+          <li><Link to="/about/">About</Link></li>
+          <li><Link to="/chatroom/">Chatroom</Link></li>
+        </ul>
+      </nav>
+      <label htmlFor="nav-toggle" className='nav-toggle-label'>
+        <span></span>
+      </label>
     </div>
   </header>
+  <div id="spacing-below-navbar"></div>
+  </>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

@@ -1,0 +1,106 @@
+#intro-container {
+  margin-top: 50px;
+  margin-left: 73px;
+}
+
+#intro-title {
+  color: white;
+  font-size: 55px;
+  margin-bottom: 5px;
+  font-weight: normal;
+ }
+ 
+ #intro-subtitle {
+   color: white;
+   font-weight: normal;
+   margin-bottom: 12px;
+ }
+
+ .enter-chatroom-button {
+  margin-left: 70px;
+  color: white;
+  background: black;
+  width: 180px;
+  border-radius: 5px;
+  border: none;
+  height: 45px;
+  letter-spacing: .5px;
+ }
+
+.sample-chat-container {
+  margin-left: 425px;
+  width: 470px;
+}
+
+ .sample-chat-subtitle {
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  margin-bottom: 12px;
+ }
+
+ .chatbox {
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  min-height: 350px;
+  position: relative;
+
+ }
+
+ .chatbox p {
+   margin-bottom: 0;
+ }
+
+ .chatbox .peer-announcement {
+   margin-bottom: 13px;
+ }
+
+.grey {
+  color: grey;
+  font-style: italic;
+}
+
+ .chat-text {
+  color: #696969;
+ }
+
+ .peer {
+   font-weight: bold;
+   color: red;
+   letter-spacing: .25px;
+ }
+
+ .you {
+  font-weight: bold;
+  color: #0070FF;
+  letter-spacing: .25px;
+ }
+
+ .chat-input-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 450px;
+ }
+
+ .username {
+  text-align: center;
+  font-weight: bold;
+  color: #0070FF;
+  letter-spacing: .25px;
+ }
+
+
+
+ .message {
+
+ }
+
+ .send-message-button {
+
+ }
+
+ .chat-message-wrapper {
+   display: flex;
+ }
