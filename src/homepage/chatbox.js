@@ -43,20 +43,22 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, endChat}) => {
         }
         {renderConversation(chat)}
       </div>
-      {chatInSession === false ? (
-        'You left the chat'
-      ) 
-        : (
-          <div className='chatbox-bottom'>
-            <form className="send-message-form" onSubmit={sendMessage}>
-              <input className='username' value={chat.you} placeholder='Your Character' onChange={e => setChat({...chat, you: e.target.value})}/>
-              <input className='message' value={chat.message} placeholder='Say something' onChange={e => setChat({...chat, message: e.target.value})}/>
-              <Fab size="small" type='submit' color="secondary" style={{marginLeft: '10px', background: "#940000"}}><SendIcon /></Fab>
-            </form>
-          </div>
-        )
-      }
-
+      <div className='chatbox-bottom'>
+        {chatInSession === false ? (
+          <>
+          <p className='left-chat-message'>You left the chat</p>
+          <button className='start-new-chat btn'>Start new chat</button>
+          </>
+        ) 
+          : (
+              <form onSubmit={sendMessage}>
+                <input className='username' value={chat.you} placeholder='Your Character' onChange={e => setChat({...chat, you: e.target.value})}/>
+                <input className='message' value={chat.message} placeholder='Say something' onChange={e => setChat({...chat, message: e.target.value})}/>
+                <Fab size="small" type='submit' color="secondary" style={{marginLeft: '10px', background: "#940000"}}><SendIcon /></Fab>
+              </form>
+          )
+        }
+      </div>
     </div>
     </>
   )

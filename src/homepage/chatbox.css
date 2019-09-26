@@ -68,12 +68,27 @@
   letter-spacing: .25px;
 }
 
-.send-message-form {
+.chatbox-bottom {
   background: white;
   border-radius: 0 0 10px 10px;
   padding: 10px;
   text-align: center;
   margin-bottom: 0;
+}
+
+.left-chat-message {
+  border-top: 1px grey dashed;
+  padding-top: 10px;
+  font-size: 35px;
+  color: #87002A;
+  font-style: italic;
+}
+
+.start-new-chat {
+  background: black;
+  width: 180px;
+  line-height: 2.5;
+  margin-bottom: 15px;
 }
 
 .username {
