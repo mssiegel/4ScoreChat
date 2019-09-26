@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Moshe Siegel <siegel.moshes@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.4.0",
+    "@material-ui/icons": "^4.2.1",
     "gatsby": "^2.13.62",
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-manifest": "^2.2.5",

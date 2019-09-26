@@ -1,6 +1,10 @@
-#intro-container {
+#first-page {
   margin-top: 50px;
-  margin-left: 73px;
+}
+
+.intro {
+  margin-top: 20px;
+  text-align: center;
 }
 
 #intro-title {
@@ -8,99 +12,78 @@
   font-size: 55px;
   margin-bottom: 5px;
   font-weight: normal;
- }
- 
- #intro-subtitle {
-   color: white;
-   font-weight: normal;
-   margin-bottom: 12px;
- }
-
- .enter-chatroom-button {
-  margin-left: 70px;
-  color: white;
-  background: black;
-  width: 180px;
-  border-radius: 5px;
-  border: none;
-  height: 45px;
-  letter-spacing: .5px;
- }
-
-.sample-chat-container {
-  margin-left: 425px;
-  width: 470px;
 }
-
- .sample-chat-subtitle {
-  text-align: center;
+ 
+#intro-subtitle {
   color: white;
   font-weight: normal;
   margin-bottom: 12px;
- }
-
- .chatbox {
-  background: white;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 16px;
-  min-height: 350px;
-  position: relative;
-
- }
-
- .chatbox p {
-   margin-bottom: 0;
- }
-
- .chatbox .peer-announcement {
-   margin-bottom: 13px;
- }
-
-.grey {
-  color: grey;
-  font-style: italic;
 }
 
- .chat-text {
-  color: #696969;
- }
+.enter-chatroom-button {
+  background: black;
+  width: 180px;
+  height: 45px;
+}
 
- .peer {
-   font-weight: bold;
-   color: red;
-   letter-spacing: .25px;
- }
+.enter-chatroom-button:hover {
+  color: #ccc;
+}
 
- .you {
-  font-weight: bold;
-  color: #0070FF;
-  letter-spacing: .25px;
- }
+.intro a, #home-footer a {
+  text-decoration: none;
+}
 
- .chat-input-wrapper {
-  position: absolute;
-  bottom: 0;
-  width: 450px;
- }
+#first-page {
+  padding-bottom: 50px;
+}
 
- .username {
+#second-page {
+  background: #F6F6FA;
+  padding-top: 50px;
+}
+
+.list-items-container {
+  align-self: center;
+}
+
+#home-footer {
+  background: #F6F6FA;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
-  font-weight: bold;
-  color: #0070FF;
-  letter-spacing: .25px;
- }
+}
+
+.call-to-action {
+  font-size: 40px;
+  letter-spacing: .5px;
+}
 
 
+@media screen and (min-width: 980px) {
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(10px, 5%) 1fr 20px 1fr minmax(10px, 5%);
+    justify-items: center;
+  }
+}
 
- .message {
+@media screen and (max-width: 979px) {
+  .grid {
+    display: grid;
+    justify-items: center;
+  }
 
- }
+  .sample-chat-container {
+    max-width: 95%;
+  }
 
- .send-message-button {
+  .intro {
+    margin-bottom: 70px;
+  }
 
- }
+  .list-items-container {
+    margin-bottom: 50px;
+  }
 
- .chat-message-wrapper {
-   display: flex;
- }
+}

@@ -8,6 +8,15 @@ body {
   min-height: 100vh;
 }
 
+.btn {
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: .5px;
+}
+
+
 
 /* Default Gatsby Styles */
 

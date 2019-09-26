@@ -1,0 +1,26 @@
+.list-item {
+  max-width: 300px;
+  margin-bottom: 40px;
+}
+
+.final-list-item {
+  max-width: 300px;
+}
+
+.list-subtitle {
+  color: #87002A;
+  font-weight: normal;
+  margin-left: 7px;
+  margin-bottom: 7px;
+  text-align: center;
+}
+
+.list-text {
+  font-size: 16px;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}

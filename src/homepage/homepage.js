@@ -1,36 +1,77 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link } from "gatsby"
 import "./homepage.css"
+import Chatbox from './chatbox'
+import ListItems from './listItems'
 
+const firstChat = {
+  title: 'Be Anyone',
+  you: 'Toy Store Owner',
+  peer: 'Vampire Hunter',
+  conversation : [
+    ['peer', 'Vampire Hunter', 'nice dagger you got'],
+    ['you', 'Toy Store Owner', "Thanks. It's made of strong plastic."],
+    ['you', 'Toy Store Owner', "hmmm, I challenge you to a duel"],
+    ['peer', 'Vampire Hunter', 'Okay, get ready to be crushed.'],
+    ['you', 'Toy Store Owner', "haha, bring it on"]
+  ],
+  message: 'Yo, I have skills that kills'
+}
 
-const HomePage = () => (
-    <div id="intro-container">
-      <h1 id="intro-title">Instant Improv</h1>
-      <h2 id="intro-subtitle">Connect with someone and chat away</h2>
-      <button className="enter-chatroom-button">Enter Chatroom</button>
+const secondChat = {
+  title: 'Be Present',
+  titleColor: 'black',
+  you: 'Vampire Hunter',
+  peer: 'Pizza Delivery Boy',
+  conversation : [
+    ['peer', 'Pizza Delivery Boy', 'ooooh'],
+    ['peer', 'Pizza Delivery Boy', 'Can you sing me a song?'],
+    ['you', 'Guitar Rockstar', "I'll sing for a smoking hot pizza"],
+    ['peer', 'Pizza Delivery Boy', "Okay, here's a pizza."],
+    ['peer', 'Pizza Delivery Boy', 'Fresh and hot.'],
+    ['you', 'Guitar Rockstar', "Delicious!!"],
+    ['you', 'Guitar Rockstar', "Let's sing the pizza song:"]
+  ],
+  message: 'oh, pizza, pizza, fill up my mouth...'
+}
 
-      <div className="sample-chat-container">
-        <h2 className="sample-chat-subtitle">Be Anyone</h2>
-        <div className="chatbox">
-          <p className="peer-announcement">
-            <span className="grey"><em>You matched with </em></span><span className="peer">Vampire Hunter</span>
-          </p>
-          <p><span className="peer">Vampire Hunter: </span><span className="chat-text">nice dagger you got</span></p>
-          <p><span className="you">Toy Store Owner: </span><span className="chat-text">Thanks. It's made of strong plastic!</span></p>
-          <p><span className="peer">Vampire Hunter: </span><span className="chat-text">hmmm, I challenge you to a duel</span></p>
-          <p><span className="you">Toy Store Owner: </span><span className="chat-text">Okay, get ready to be crushed.</span></p>
-          <p><span className="peer">Vampire Hunter: </span><span className="chat-text">haha, bring it on</span></p>
-          <div className="chat-input-wrapper">
-            <p className='username'>Toy Store Owner</p>
-            <div className="chat-message-wrapper">
-              <p className='message'>Smiley Emoji. Yo, I have skills that kills</p>
-              <button className="send-message-button">Arrow</button>
-            </div>
-          </div>
+const HomePage = () => {
+
+  const [chat1, setChat1] = useState(firstChat)
+  const [chat2, setChat2] = useState(secondChat)
+
+  return (
+    <>
+    <section id="first-page" className="grid">
+        <div></div>
+        <div className="intro">
+          <h1 id="intro-title">Instant Improv</h1>
+          <h2 id="intro-subtitle">Connect and chat away</h2>
+          <Link to="/chatroom/">
+            <button className="enter-chatroom-button btn">Enter Chatroom</button>
+          </Link>
         </div>
+        <div></div>
+      <Chatbox chat={chat1} setChat={setChat1}/>
+      <div></div>
+    </section>
+    <section id="second-page" className="grid">
+      <div></div>
+      <div className="list-items-container">
+        <ListItems />
       </div>
-
-  </div>
-)
+      <div></div>
+      <Chatbox chat={chat2} setChat={setChat2}/>
+      <div></div>
+    </section>
+    <div id="home-footer">
+      <h2 className="call-to-action">Who will you be?</h2>
+      <Link to="/chatroom/">
+        <button className="enter-chatroom-button btn">Enter Chatroom</button>
+      </Link>
+    </div>
+    </>
+  )
+}
 
 export default HomePage
