@@ -6,7 +6,6 @@ import ListItems from './listItems'
 
 const firstChat = {
   title: 'Be Anyone',
-  you: 'Toy Store Owner',
   peer: 'Vampire Hunter',
   conversation : [
     ['peer', 'Vampire Hunter', 'nice dagger you got'],
@@ -21,7 +20,6 @@ const firstChat = {
 const secondChat = {
   title: 'Be Present',
   titleColor: 'black',
-  you: 'Vampire Hunter',
   peer: 'Pizza Delivery Boy',
   conversation : [
     ['peer', 'Pizza Delivery Boy', 'ooooh'],

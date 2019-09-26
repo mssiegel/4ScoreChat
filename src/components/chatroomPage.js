@@ -56,10 +56,11 @@ const chatroomPage = () => {
         </div>
       }
     </section>
-    <div className="center">
-      <Chatbox chat={chat} chatInSession={chatInSession} suggestCharacter={suggestCharacter} setChat={setChat} endChat={() => setChatInSession(false)}/>
-    </div>
-
+    {chatInSession &&
+      <div className="center">
+        <Chatbox chat={chat} chatInSession={chatInSession} suggestCharacter={suggestCharacter} setChat={setChat} setChatInSession={setChatInSession} />
+      </div>
+    }
     </>
   )
 }
