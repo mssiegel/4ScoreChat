@@ -1,9 +1,18 @@
 import React, {useState, useEffect} from "react"
 import "./chatroomPage.css"
-import MoodIcon from '@material-ui/icons/Mood';
+import MoodIcon from '@material-ui/icons/Mood'
 import Chatbox from '../homepage/chatbox'
+import io from 'socket.io-client'
+
 
 const chatroomPage = () => {
+  //Set up socket.io connection to server
+  //If client is at 4scorechat domain name, use heroku backend api else use local host backend api
+  //const serverUrl = window.location.href === 'https://www.4scorechat.com/' ? 'https://scorechat.herokuapp.com/' : 'http://localhost:4000';
+  const serverUrl = 'https://scorechat.herokuapp.com/'
+  const socket = io(serverUrl);
+
+  
   const characterIcon = {
     color: 'white',
     verticalAlign: 'middle',
@@ -23,12 +32,28 @@ const chatroomPage = () => {
     setChat({...chat, you: randomChar})
   }
 
-  
+
+  //EMIT socket events
+
+
+
+  //LISTEN for socket events
+
+  socket.on('chat start', peersName => {
+    setChat({...chat, peer: peersName})
+  })
 
   const [waitingForPeer, setWaitingForPeer] = useState(false)
   const [chatInSession, setChatInSession] = useState(false)
   
   const [chat, setChat] = useState({title: 'Start Chatting', you: '', peer: 'Sam the Sheriff', conversation: [], message: '', startTime})
+  function startChatBtnClicked(){
+    console.log('START CHAT BTN CLICKED')
+    setWaitingForPeer(true)
+    setChatInSession(true)
+    socket.emit('enter chatQueue', chat.you)
+  }
+
 
   useEffect(() => {
     //send message to socket.io
@@ -46,7 +71,7 @@ const chatroomPage = () => {
       </div>
       {(!waitingForPeer && !chatInSession) &&  
         <button className={`start-chat btn ${chat.you ? '' : 'disabled'}`} disabled={!chat.you} 
-        onClick={() => {setWaitingForPeer(true); setChatInSession(true)}}>Start Chat</button>
+        onClick={startChatBtnClicked}>Start Chat</button>
       }
       {waitingForPeer && 
         <div className="waiting-for-peer"> 

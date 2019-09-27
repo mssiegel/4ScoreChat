@@ -17,7 +17,6 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
     if (chat.you && chat.message) 
       setChat({...chat, message: '', conversation: [...chat.conversation, ['you', chat.you, chat.message]]})
     e.preventDefault()
-    console.log(chatInSession)
   }
 
   const renderConversation = ({peer, conversation}) => (
