@@ -1,8 +1,8 @@
-import React, {useState} from "react"
-import "./chatbox.css"
+import React, {useState, useEffect} from "react"
+import "./Chatbox.css"
 import Fab from '@material-ui/core/Fab'
-import SendIcon from '@material-ui/icons/Send';
-import MoodIcon from '@material-ui/icons/Mood';
+import SendIcon from '@material-ui/icons/Send'
+import MoodIcon from '@material-ui/icons/Mood'
 
 const characterIcon = {
   color: 'white',
@@ -10,13 +10,38 @@ const characterIcon = {
   marginLeft: '5px'
 }
 
-const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSession}) => {
+const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSession, socket}) => {
   const [chatEnded, setChatEnded] = useState(false)
+  const [chatEnder, setChatEnder] = useState()
+
+  useEffect(() => {
+    if (socket) {
+      socket.on('chat end', ()=> {
+        setChatEnded(true)
+        setChatEnder('Your peer')
+      })
+      return () => socket.off('chat end')
+    }
+  }, [socket])
 
   function sendMessage(e) {
+    e.preventDefault()
     if (chat.you && chat.message) 
       setChat({...chat, message: '', conversation: [...chat.conversation, ['you', chat.you, chat.message]]})
-    e.preventDefault()
+    if (socket) {
+      socket.emit('chat message', {
+        userName: chat.you,
+        message: chat.message
+      })
+    //message.focus()
+    //scrollToBottomOfChat()
+    }
+  }
+
+  function endChat() {
+    socket.emit('end chat')
+    setChatEnded(true)
+    setChatEnder('You')
   }
 
   const renderConversation = ({peer, conversation}) => (
@@ -36,10 +61,10 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
     <div className="sample-chat-container">
       <h2 className={`sample-chat-subtitle`} style={{color: chat.titleColor}}>{chat.title}</h2>
       <div className="chatbox">
-        {chatInSession &&
+        {(chatInSession && !chatEnded)  &&
           <div className="chat-buttons">
             <button className="suggest-character btn" onClick={suggestCharacter}>Suggest <MoodIcon style={characterIcon}/></button>
-            <button className="end-chat btn" onClick={() => {setChatEnded(true)}}>End</button>
+            <button className="end-chat btn" onClick={endChat}>End</button>
           </div>
         }
         {renderConversation(chat)}
@@ -47,8 +72,8 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
       <div className='chatbox-bottom'>
         {chatEnded ? 
           <>
-          <p className='left-chat-message'>You left the chat</p>
-          <button className='start-new-chat btn' onClick={() => {setChat({...chat, conversation: []}); setChatInSession(false)}}>Start new chat</button>
+          <p className='left-chat-message'>{chatEnder} left the chat</p>
+          <button className='start-new-chat btn' onClick={() => {setChat({...chat, conversation: [], message: ''}); setChatInSession(false)}}>Erase chat</button>
           </> 
           : 
           <form onSubmit={sendMessage}>

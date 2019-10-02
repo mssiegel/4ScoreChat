@@ -1,11 +1,12 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
-import "./homepage.css"
-import Chatbox from './chatbox'
-import ListItems from './listItems'
+import "./Homepage.css"
+import Chatbox from './Chatbox'
+import ListItems from './ListItems'
 
 const firstChat = {
   title: 'Be Anyone',
+  you: 'Toy Store Owner',
   peer: 'Vampire Hunter',
   conversation : [
     ['peer', 'Vampire Hunter', 'nice dagger you got'],
@@ -20,6 +21,7 @@ const firstChat = {
 const secondChat = {
   title: 'Be Present',
   titleColor: 'black',
+  you: 'Guitar Rockstar',
   peer: 'Pizza Delivery Boy',
   conversation : [
     ['peer', 'Pizza Delivery Boy', 'ooooh'],

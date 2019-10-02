@@ -8,8 +8,8 @@
 import React from "react"
 
 import 'typeface-roboto'
-import Header from "./header"
-import "./layout.css"
+import Header from "./Header"
+import "./Layout.css"
 
 const Layout = ({ children }) => {
   return (

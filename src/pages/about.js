@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import AboutPage from "../components/aboutPage"
+import AboutPage from "../components/AboutPage"
 
 
 const About = () => (

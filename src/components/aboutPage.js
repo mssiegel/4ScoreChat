@@ -1,6 +1,6 @@
 import React from "react"
 
-const aboutPage = () => {
+const AboutPage = () => {
   const aboutPageWrapper = {
     background: '#F6F6FA',
     maxWidth: '94%',
@@ -51,4 +51,4 @@ const aboutPage = () => {
   )
 }
 
-export default aboutPage
+export default AboutPage

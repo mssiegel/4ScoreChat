@@ -76,13 +76,13 @@
   padding: 15px 20px 5px 20px;
   animation: blinker 3s linear infinite;
 }
-/*
+
 @keyframes blinker {
   50% {
     opacity: .2;
   }
 }
-*/
+
 .waiting-title {
   font-size: 26px;
   color: blue;

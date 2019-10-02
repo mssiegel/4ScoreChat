@@ -1,10 +1,10 @@
 import React from "react"
-import "./listItems.css"
+import "./ListItems.css"
 import PaletteIcon from '@material-ui/icons/Palette'
 import SecurityIcon from '@material-ui/icons/Security'
 import ChildCareIcon from '@material-ui/icons/ChildCare';
 
-const ListItems = ({chat}) => {  
+const ListItems = () => {  
   return (
     <>
       <div className="list-item">
