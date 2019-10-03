@@ -5,6 +5,9 @@ import Chatbox from '../homepage/Chatbox'
 import io from 'socket.io-client'
 let socket
 
+const tips = ['feel free to EXAGGERATE your words by using capital letters', 'use your partner for leverage. Together, shoot for the skies', 'for comedy, agree with your peer and dramatize what they say', 'smile because it will make you happier', 'do not keep your peers waiting while you write long pagragraphs. Instead, write shorter lines', 'be present. Blank your mind to the past and future. Stay focused on the NOW.', 'choose whatever crazy character tickles your fancy', 'do not enter with a predetermined storyline. Enter with a blank mind. Create the plot with each back-and-forth response', 'try to get better and better. When your chat ends, review it. Look for ways to improve your chatting skills', 'cooperation works wonders. See your peer as your partner in creating a beautiful storyline', 'chats can get intense. Come prepared with a box of tissues and a shoulder to lean on', 'partner with your peer to create deep, intense, emotional storylines']
+const randomTip  = tips[Math.floor(Math.random() * tips.length)]
+
 const ChatroomPage = () => {
   
   useEffect(() => {
@@ -22,16 +25,10 @@ const ChatroomPage = () => {
       setChatInSession(true)
     })
 
-    socket.on('chat message', msg => {
-      //clearUserTyping();
-      setChat(chat => ({...chat, conversation: [...chat.conversation, ['peer', msg.userName, msg.message]]}))
-      //scrollToBottomOfChat();
-    })
-    
-    socket.on('typing', userName => {
-      //notifySomeoneIsTyping(userName);
-    })
-  },[])
+    return () => {
+      socket.off('chat start')
+    }
+  }, [])
 
   const characterIcon = {
     color: 'white',
@@ -69,19 +66,24 @@ const ChatroomPage = () => {
   const [waitingForPeer, setWaitingForPeer] = useState(false)
   const [chatInSession, setChatInSession] = useState(false)
 
-  const [chat, setChat] = useState({title: 'Start Chatting', you: '', peer: 'Sam the Sheriff', conversation: [], message: ''})
+  const [chat, setChat] = useState({title: '', you: '', peer: '', conversation: [], message: ''})
 
 
   return (
     <>
     <section className="about-page-wrapper">
       <h1 className="title-style">Chatroom</h1>
-      <p id="tip">Tip: agree with your partner and build off what they say</p>
-      <button className="suggest-character btn" onClick={suggestCharacter}>Suggest <MoodIcon style={characterIcon}/></button>
-      <div>
-        <p className="your-character-text">Your character: </p>
-        <input className="choose-char" value={chat.you} placeholder="Ex: Crazy Tour Guide" maxLength="30" onChange={e => setChat({...chat, you: e.target.value})}/>
-      </div>
+      <p id="tip">Tip: {randomTip}</p>
+      {!chatInSession &&
+      <>
+        <button className={`suggest-character btn ${waitingForPeer ? 'disabled' : ''}`} onClick={suggestCharacter}>Suggest <MoodIcon style={characterIcon}/></button>
+        <div className={`${waitingForPeer ? 'low-opacity' : ''}`}>
+          <p className="your-character-text">Your character: </p>
+          <input className={`choose-char ${waitingForPeer ? 'not-clickable' : ''}`} value={chat.you} placeholder="Ex: Crazy Tour Guide" maxLength="30" 
+          disabled={waitingForPeer} onChange={e => setChat({...chat, you: e.target.value})}/>
+        </div>
+      </>
+      }
       {(!waitingForPeer && !chatInSession) &&  
         <button className={`start-chat btn ${chat.you ? '' : 'disabled'}`} disabled={!chat.you} 
         onClick={startChatBtnClicked}>Start Chat</button>

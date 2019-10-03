@@ -56,15 +56,17 @@
 }
 
 .start-chat {
-  /*height: 80px;*/
   line-height: 4;
   width: 183px;
   background: black;
 }
 
 .disabled {
-  background: darkgrey;
-  color: lightgrey;
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.not-clickable {
   cursor: not-allowed;
 }
 

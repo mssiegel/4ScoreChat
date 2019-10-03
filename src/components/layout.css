@@ -16,6 +16,9 @@ body {
   letter-spacing: .5px;
 }
 
+.low-opacity {
+  opacity: 0.7;
+}
 
 
 /* Default Gatsby Styles */
