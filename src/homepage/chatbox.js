@@ -53,16 +53,17 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
 
   function sendMessage(e) {
     e.preventDefault()
-    if (chat.you && chat.message) 
+    if (chat.you && chat.message) {
       setChat({...chat, message: '', conversation: [...chat.conversation, ['you', chat.you, chat.message]]})
-    if (socket) {
-      socket.emit('chat message', {
-        userName: chat.you,
-        message: chat.message
-      })
-    messageInput.current.focus()
-    scrollToBottomOfChat()
+      if (socket) {
+        socket.emit('chat message', {
+          userName: chat.you,
+          message: chat.message
+        })
+      scrollToBottomOfChat()
+      }
     }
+    messageInput.current.focus()
   }
 
   function endChat() {
