@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "4Score Chat lets you pick a character and instantly start chatting anonymously with a stranger.",
+  "description": "4Score Chat lets you pick a character and instantly start chatting with a stranger.",
   "version": "0.1.0",
   "author": "Moshe Siegel <siegel.moshes@gmail.com>",
   "dependencies": {
@@ -39,6 +39,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "UI-Protoype": {
+    "editor-url": "www.fluidui.com",
+    "shared-url": "https://www.fluidui.com/editor/live/preview/cF9MU2NwYlFPV3Q5cktzbjFsbXpvNlBVdkFUaERTN2FaRA=="
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,31 @@
+/* CSS common to both About Page and Mastery Guide */
+
+.page-wrapper {
+  background: #F6F6FA;
+  max-width: 94%;
+  margin: auto;
+  margin-top: 5px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.common-center {
+  max-width: 600px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.title-style {
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+
+@media screen and (max-width: 979px) {
+  .common-center {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}

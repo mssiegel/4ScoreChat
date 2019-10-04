@@ -45,9 +45,11 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
     if (chatInSession) messageInput.current.focus()
 
     return () => {
-      socket.off('chat end')
-      socket.off('chat message')
-      socket.off('typing')
+      if(socket) {
+        socket.off('chat end')
+        socket.off('chat message')
+        socket.off('typing')
+      }
     }
   }, [])
 

@@ -1,0 +1,18 @@
+.guide-title {
+  background: #87002A;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  letter-spacing: .3px;
+}
+
+.good {
+  font-weight: 500;
+  color: green;
+}
+
+.bad {
+  font-weight: 500;
+  color: red;
+}

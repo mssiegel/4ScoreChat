@@ -26,7 +26,7 @@ const ChatroomPage = () => {
     })
 
     return () => {
-      socket.off('chat start')
+      if (socket) socket.off('chat start')
     }
   }, [])
 
