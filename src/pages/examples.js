@@ -7,7 +7,9 @@ import ExamplesPage from "../components/ExamplePage"
 
 const Examples = () => (
   <Layout>
-    <SEO title="Examples" />
+    <SEO title="Examples"
+      description="For entertainment, read some thrilling and exciting sample chats created on 4ScoreChat."
+    />
     <ExamplesPage />
 
   </Layout>

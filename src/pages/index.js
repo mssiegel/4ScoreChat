@@ -7,7 +7,10 @@ import Homepage from "../homepage/Homepage"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO 
+      title="Home" 
+      description="Choose your character and get ready for some clean improv. We'll pair you with someone for a fun chat adventure. Please keep chats family friendly."
+    />
     <Homepage/>
 
   </Layout>
