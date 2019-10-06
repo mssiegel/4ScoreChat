@@ -89,7 +89,7 @@ const MasteryGuide = () => {
         <Lesson lessonContent={startPositive}/>
       </div>
     </section>
-    <div style={emptyDiv}></div>
+    <div className="empty-space-on-bottom"></div>
     </>
   )
 }

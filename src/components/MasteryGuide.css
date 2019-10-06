@@ -16,3 +16,7 @@
   font-weight: 500;
   color: red;
 }
+
+.empty-space-on-bottom {
+  height: 40px;
+}

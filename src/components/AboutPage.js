@@ -7,10 +7,6 @@ const AboutPage = () => {
     marginTop: '50px',
     fontSize: '15px'
   }
-  
-  const emptyDiv = {
-    height: '40px'
-  }
 
   return (
     <>
@@ -24,7 +20,7 @@ const AboutPage = () => {
         <p style={aboutDisclaimer}>Disclaimer: By using our site you agree to have fun, entertaining improv chats. You also acknowledge you can end a chat at any time and agree to not hold us responsible for any claims made during chats.</p>
       </div>
     </section>
-    <div style={emptyDiv}></div>
+    <div className="empty-space-on-bottom"></div>
     </>
   )
 }
