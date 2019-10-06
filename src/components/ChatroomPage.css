@@ -1,12 +1,5 @@
-.about-page-wrapper {
-  padding-top: 30px;
+.chatroom-page-wrapper {
   color: white;
-  text-align: center;
-}
-
-.title-style {
-  font-size: 40px;
-  font-weight: normal;
   text-align: center;
 }
 
@@ -102,12 +95,6 @@
   margin: 10px;
   padding: 2px 26px;
 }
-
-.center {
-  display: flex;
-  justify-content: center;
-}
-
 
 @media screen and (min-width: 780px) {
   .your-character-text {

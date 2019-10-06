@@ -11,8 +11,7 @@ const characterIcon = {
   marginLeft: '5px'
 }
 
-const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSession, socket}) => {
-  
+const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSession, socket, noBottom}) => { 
   const [chatEnded, setChatEnded] = useState(false)
   const [chatEnder, setChatEnder] = useState()
   const [peerTyping, setPeerTyping] = useState(false)
@@ -108,23 +107,25 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
         }
         {renderConversation(chat)}
       </div>
-      <div className='chatbox-bottom'>
-        {chatEnded ? 
-          <>
-          <p className='left-chat-message'>{chatEnder} left the chat</p>
-          <button className='start-new-chat btn' onClick={() => {setChat({...chat, conversation: [], message: ''}); setChatInSession(false)}}>Erase chat</button>
-          </> 
-          :
-          <>
-          <p className='peer-typing-notification'>{peerTyping && `${peerTyping} is typing...`}</p> 
-          <form onSubmit={sendMessage}>
-            <input className='username' value={chat.you} placeholder='Your Character' maxLength="30" onChange={e => setChat({...chat, you: e.target.value})}/>
-            <input className='message' value={chat.message} placeholder='Say something' maxLength="75" onChange={userTyping} ref={messageInput}/>
-            <Fab size="small" type='submit' color="secondary" style={{marginLeft: '10px', background: "#940000"}}><SendIcon /></Fab>
-          </form>
-          </>
-        }
-      </div>
+      {!noBottom && ( 
+        <div className='chatbox-bottom'>
+          {chatEnded ? 
+            <>
+            <p className='left-chat-message'>{chatEnder} left the chat</p>
+            <button className='start-new-chat btn' onClick={() => {setChat({...chat, conversation: [], message: ''}); setChatInSession(false)}}>Erase chat</button>
+            </> 
+            :
+            <>
+            <p className='peer-typing-notification'>{peerTyping && `${peerTyping} is typing...`}</p> 
+            <form onSubmit={sendMessage}>
+              <input className='username' value={chat.you} placeholder='Your Character' maxLength="30" onChange={e => setChat({...chat, you: e.target.value})}/>
+              <input className='message' value={chat.message} placeholder='Say something' maxLength="75" onChange={userTyping} ref={messageInput}/>
+              <Fab size="small" type='submit' color="secondary" style={{marginLeft: '10px', background: "#940000"}}><SendIcon /></Fab>
+            </form>
+            </>
+          }
+        </div>
+      )}
     </div>
     </>
   )

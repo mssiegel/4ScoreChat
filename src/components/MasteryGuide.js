@@ -26,7 +26,7 @@ const startPositive = {
   ],
   badImprov: [
     ['Sad Alien', "Hi, I am lost"],
-    ['Karate Dude', "I am sad as I cannot break planks with my bare hands."]
+    ['Karate Dude', "Hi, I am an unhappy karate person"]
   ]
 }
 
@@ -82,7 +82,7 @@ const MasteryGuide = () => {
   return (
     <>
     <section className='page-wrapper'>
-      <h1 className='title-style'>Mastery Guide</h1>
+      <h1 className='page-title'>Mastery Guide</h1>
       <div className='common-center'>
         <Lesson lessonContent={yesAnd}/>
         <Lesson lessonContent={oneLineAtATime}/>

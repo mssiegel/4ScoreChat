@@ -71,8 +71,8 @@ const ChatroomPage = () => {
 
   return (
     <>
-    <section className="about-page-wrapper">
-      <h1 className="title-style">Chatroom</h1>
+    <section className="chatroom-page-wrapper">
+      <h1 className="page-title">Chatroom</h1>
       <p id="tip">Tip: {randomTip}</p>
       {!chatInSession &&
       <>
@@ -97,7 +97,7 @@ const ChatroomPage = () => {
       }
     </section>
     {chatInSession &&
-      <div className="center">
+      <div className="center-chatbox">
         <Chatbox chat={chat} chatInSession={chatInSession} suggestCharacter={suggestCharacter} setChat={setChat} setChatInSession={setChatInSession} socket={socket} />
       </div>
     }

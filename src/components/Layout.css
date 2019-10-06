@@ -16,8 +16,20 @@ body {
   letter-spacing: .5px;
 }
 
+.page-title {
+  padding-top: 30px;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+
 .low-opacity {
   opacity: 0.7;
+}
+
+.center-chatbox {
+  display: flex;
+  justify-content: center;
 }
 
 
