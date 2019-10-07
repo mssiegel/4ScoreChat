@@ -21,6 +21,8 @@
 .chat-buttons {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
 .chat-buttons .suggest-character {
@@ -78,7 +80,7 @@
 .left-chat-message {
   border-top: 1px grey dashed;
   padding-top: 10px;
-  font-size: 35px;
+  font-size: 32px;
   color: #87002A;
   font-style: italic;
   opacity: 0.7;

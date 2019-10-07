@@ -63,6 +63,17 @@
   cursor: not-allowed;
 }
 
+.no-internet {
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+  padding: 10px;
+  color: white;
+  font-size: 25px;
+  line-height: 1.3;
+  border: 2px dashed red;
+  animation: blinker 3s linear infinite;
+}
+
 .waiting-for-peer {
   max-width: 500px;
   margin: auto;
