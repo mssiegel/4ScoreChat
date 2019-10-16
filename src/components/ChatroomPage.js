@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react"
 import "./ChatroomPage.css"
 import MoodIcon from '@material-ui/icons/Mood'
-import Chatbox from '../homepage/Chatbox'
+import Chatbox from './Chatbox'
 //import io from 'socket.io-client'
 //let socket
 

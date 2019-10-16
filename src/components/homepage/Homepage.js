@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
 import "./Homepage.css"
-import Chatbox from './Chatbox'
+import Chatbox from '../Chatbox'
 import ListItems from './ListItems'
 
 const firstChat = {

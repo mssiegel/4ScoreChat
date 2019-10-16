@@ -1,5 +1,5 @@
 import React from "react"
-import './common.css'
+import './common/common.css'
 
 const AboutPage = () => {
 

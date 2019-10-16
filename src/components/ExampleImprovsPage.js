@@ -1,7 +1,6 @@
 import React from "react"
-import './common.css'
-import './ExamplePage.css'
-import Chatbox from '../homepage/Chatbox'
+import './ExampleImprovsPage.css'
+import Chatbox from './Chatbox'
 
 const firstExample = {
   title: "The Hypnotist's Watch",
@@ -98,12 +97,12 @@ const secondExample = {
 }
 
 
-const ExamplePage = () => {
+const ExampleImprovsPage = () => {
 
   return (
     <>
     <section className="examples-page-wrapper">
-      <h1 className='page-title examples-padding-bottom'>Examples</h1>
+      <h1 className='page-title examples-padding-bottom'>Example Improvs</h1>
 
       <div className="center-chatbox examples-padding-bottom">
         <Chatbox chat={firstExample} noBottom={true} />
@@ -116,4 +115,4 @@ const ExamplePage = () => {
   )
 }
 
-export default ExamplePage
+export default ExampleImprovsPage

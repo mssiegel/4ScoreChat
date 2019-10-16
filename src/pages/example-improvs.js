@@ -1,18 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/Layout"
+import Layout from "../components/common/Layout"
 import SEO from "../components/seo"
-import ExamplesPage from "../components/ExamplePage"
+import ExampleImprovsPage from "../components/ExampleImprovsPage"
 
-const Examples = () => (
+const ExampleImprovs = () => (
   <Layout>
-    <SEO title="Examples"
+    <SEO title="Example Improvs"
       description="For entertainment, read some thrilling and exciting sample chats created on 4ScoreChat."
     />
-    <ExamplesPage />
+    <ExampleImprovsPage />
 
   </Layout>
 )
 
-export default Examples
+export default ExampleImprovs

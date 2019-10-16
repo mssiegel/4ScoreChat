@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/Layout"
+import Layout from "../components/common/Layout"
 import SEO from "../components/seo"
 import ChatroomPage from "../components/ChatroomPage"
 import io from 'socket.io-client'

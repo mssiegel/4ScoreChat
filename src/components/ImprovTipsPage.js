@@ -1,6 +1,6 @@
 import React from "react"
-import './common.css'
-import './MasteryGuide.css'
+import './common/common.css'
+import './ImprovTipsPage.css'
 
 
 const yesAnd = {
@@ -73,16 +73,12 @@ const Lesson = ({lessonContent}) => {
 
 
 
-const MasteryGuide = () => {
-
-  const emptyDiv = {
-    height: '40px'
-  }
+const ImprovTipsPage = () => {
   
   return (
     <>
     <section className='page-wrapper'>
-      <h1 className='page-title'>Mastery Guide</h1>
+      <h1 className='page-title'>Improv Tips</h1>
       <div className='common-center'>
         <Lesson lessonContent={yesAnd}/>
         <Lesson lessonContent={oneLineAtATime}/>
@@ -94,4 +90,4 @@ const MasteryGuide = () => {
   )
 }
 
-export default MasteryGuide
+export default ImprovTipsPage

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from "../images/wizard-hat.jpg"
+import logo from "../../images/wizard-hat.jpg"
 import "./Header.css"
 
 
@@ -17,8 +17,8 @@ const Header = () => (
       <input type="checkbox" id="nav-toggle" className="nav-toggle"/>
       <nav>
         <ul>
-          <li><Link to="/examples/">Examples</Link></li>
-          <li><Link to="/guide/">Guide</Link></li>
+          <li><Link to="/example-improvs/">Example Improvs</Link></li>
+          <li><Link to="/improv-tips/">Improv Tips</Link></li>
           <li><Link to="/about/">About</Link></li>
           <li><Link to="/chatroom/">Chatroom</Link></li>
         </ul>
