@@ -3,6 +3,8 @@
   4Score Chat - Front End Client Code
 </h1>
 
+4Score Chat lets you pick a character and instantly start chatting with a stranger.
+
 Website is live at www.4scorechat.com
 
 This front end codebase is built using ReactJs within Gatsby framework
