@@ -13,4 +13,4 @@ Real-time chatting is provided using websockets via Socket.io
 
 The back end server code uses Node.js and is hosted in a separate repository
 
-Our 4Score Chat business plan, marketing plan, and engineering best practices are at: <a href="https://docs.google.com/spreadsheets/d/1PkG1mRXymWYBgnN4pESpvPua2qOoHGQWorhFzF63ATo/">4Score Chat Business Plan</a> 
+Our 4Score Chat engineering best practices are located within our: <a href="https://docs.google.com/spreadsheets/d/1PkG1mRXymWYBgnN4pESpvPua2qOoHGQWorhFzF63ATo/">4Score Chat Business Plan</a> 
