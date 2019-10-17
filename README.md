@@ -4,8 +4,6 @@
 
 4Score Chat lets you pick a character and instantly start chatting with a stranger.
 
-Website is live at www.4scorechat.com
-
 This front end codebase is built using ReactJs within Gatsby framework
 
 Real-time chatting is provided using websockets via Socket.io
