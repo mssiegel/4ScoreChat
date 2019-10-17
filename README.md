@@ -1,26 +1,26 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's default starter
+  4Score Chat - Front End Client Code
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Codebase is built using ReactJs within Gatsby framework
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Real-time chatting is provided using websockets via Socket.io
+
+The back end server code uses Node.js and is hosted in a separate repository
+
+Our 4Score Chat business plan, marketing plan, and engineering best practices are at: <a href="https://docs.google.com/spreadsheets/d/1PkG1mRXymWYBgnN4pESpvPua2qOoHGQWorhFzF63ATo/">4Score Chat Business Plan</a> 
+
+
+
+
 
 ## 🚀 Quick start
 
+1. **Download Repo and run ```npm install```** 
+
 1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
-
-    ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
     ```
 
 1.  **Start developing.**
