@@ -3,7 +3,7 @@
   4Score Chat - Front End Client Code
 </h1>
 
-Website is live at <a href="https://www.4scorechat.com/" target="_blank">www.4scorechat.com</a>
+Website is live at www.4scorechat.com
 
 This front end codebase is built using ReactJs within Gatsby framework
 
