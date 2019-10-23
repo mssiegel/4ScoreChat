@@ -2,13 +2,8 @@ import React, {useState, useEffect} from "react"
 import "./ChatroomPage.css"
 import MoodIcon from '@material-ui/icons/Mood'
 import Chatbox from './Chatbox'
-//import io from 'socket.io-client'
-//let socket
 
-const tips = ['feel free to EXAGGERATE your words by using capital letters', 'use your partner for leverage. Together, shoot for the skies', 'for comedy, agree with your peer and dramatize what they say', 'smile because it will make you happier', 'do not keep your peers waiting while you write long pagragraphs. Instead, write shorter lines', 'blank your mind to the past and future. Stay focused on the NOW.', 'choose whatever crazy character tickles your fancy', 'do not enter with a predetermined storyline. Enter with a blank mind. Create the plot with each back-and-forth response', 'try to get better and better. When your chat ends, review it. Look for ways to improve your chatting skills', 'cooperation works wonders. See your peer as your partner in creating a beautiful storyline', "chats can get intense. Come prepared with a box of tissues and a shoulder to lean on...or don't", 'partner with your peer to create deep, intense, emotional storylines']
-const randomTip  = tips[Math.floor(Math.random() * tips.length)]
-
-const ChatroomPage = ({socket}) => {
+const ChatroomPage = ({socket, randomTip}) => {
   
   useEffect(() => {
     //LISTEN for Socket Events
