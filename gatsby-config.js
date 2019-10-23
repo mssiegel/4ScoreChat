@@ -5,6 +5,7 @@ module.exports = {
     author: `Moshe Siegel`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
