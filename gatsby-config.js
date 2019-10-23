@@ -3,6 +3,7 @@ module.exports = {
     title: `4Score Chat: Clean Instant Improv`,
     description: `4Score Chat lets you pick a character and instantly start chatting anonymously with a stranger. It's the perfect place to exercise your imagination in a family-friendly way.`,
     author: `Moshe Siegel`,
+    siteUrl: 'https://www.4scorechat.com/'
   },
   plugins: [
     `gatsby-plugin-sitemap`,
