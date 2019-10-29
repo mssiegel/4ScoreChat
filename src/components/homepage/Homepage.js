@@ -11,11 +11,14 @@ const firstChat = {
   conversation : [
     ['peer', 'Vampire Hunter', 'nice dagger you got'],
     ['you', 'Toy Store Owner', "Thanks. It's made of strong plastic."],
-    ['you', 'Toy Store Owner', "hmmm, I challenge you to a duel"],
-    ['peer', 'Vampire Hunter', 'Okay, get ready to be crushed.'],
-    ['you', 'Toy Store Owner', "haha, bring it on"]
+    ['you', 'Vampire Hunter', "I didn't know daggers came in plastic"],
+    ['peer', 'Toy Store Owner', "Its a toy dagger"],
+    ['peer', 'Toy Store Owner', "It comes in a set"],
+    ['you', 'Vampire Hunter', "Oh, so incredible"],
+    ['peer', 'Toy Store Owner', "Thanks. I've sold 30 of them so far today"],
+    ['you', 'Vampire Hunter', "Make that 31. Give me one."]
   ],
-  message: 'Yo, I have skills that kills'
+  message: ''
 }
 
 const secondChat = {
@@ -30,9 +33,11 @@ const secondChat = {
     ['peer', 'Pizza Delivery Boy', "Okay, here's a pizza."],
     ['peer', 'Pizza Delivery Boy', 'Fresh and hot.'],
     ['you', 'Guitar Rockstar', "Delicious!!"],
-    ['you', 'Guitar Rockstar', "Let's sing the pizza song:"]
+    ['you', 'Guitar Rockstar', "Let's sing the pizza song:"],
+    ['you', 'Guitar Rockstar', "Oh pizza, pizza, fill up my mouth..."],
+    ['peer', 'Pizza Delivery Boy', "pizza, pizza I LOVE YOU pizza!"],
   ],
-  message: 'oh, pizza, pizza, fill up my mouth...'
+  message: ''
 }
 
 const HomePage = () => {
@@ -52,7 +57,7 @@ const HomePage = () => {
           </Link>
         </div>
         <div></div>
-      <Chatbox chat={chat1} setChat={setChat1}/>
+      <Chatbox chat={chat1} setChat={setChat1} noBottom={true}/>
       <div></div>
     </section>
     <section id="second-page" className="grid">
@@ -61,7 +66,7 @@ const HomePage = () => {
         <ListItems />
       </div>
       <div></div>
-      <Chatbox chat={chat2} setChat={setChat2}/>
+      <Chatbox chat={chat2} setChat={setChat2} noBottom={true}/>
       <div></div>
     </section>
     <div id="home-footer">
