@@ -10,13 +10,10 @@ const firstChat = {
   peer: 'Vampire Hunter',
   conversation : [
     ['peer', 'Vampire Hunter', 'nice dagger you got'],
-    ['you', 'Toy Store Owner', "Thanks. It's made of strong plastic."],
-    ['you', 'Vampire Hunter', "I didn't know daggers came in plastic"],
-    ['peer', 'Toy Store Owner', "Its a toy dagger"],
-    ['peer', 'Toy Store Owner', "It comes in a set"],
-    ['you', 'Vampire Hunter', "Oh, so incredible"],
-    ['peer', 'Toy Store Owner', "Thanks. I've sold 30 of them so far today"],
-    ['you', 'Vampire Hunter', "Make that 31. Give me one."]
+    ['you', 'Toy Store Owner', "thanks. It's made of strong plastic."],
+    ['peer', 'Vampire Hunter', "hmmm, I challenge you to a duel"],
+    ['you', 'Toy Store Owner', "haha bring it on bub"],
+    ['peer', 'Vampire Hunter', "with pleasure"]
   ],
   message: ''
 }
@@ -24,18 +21,16 @@ const firstChat = {
 const secondChat = {
   title: 'Be Present',
   titleColor: 'black',
-  you: 'Guitar Rockstar',
-  peer: 'Pizza Delivery Boy',
+  you: 'Pizza Delivery Boy',
+  peer: 'Guitar Rockstar',
   conversation : [
-    ['peer', 'Pizza Delivery Boy', 'ooooh'],
-    ['peer', 'Pizza Delivery Boy', 'Can you sing me a song?'],
-    ['you', 'Guitar Rockstar', "I'll sing for a smoking hot pizza"],
-    ['peer', 'Pizza Delivery Boy', "Okay, here's a pizza."],
-    ['peer', 'Pizza Delivery Boy', 'Fresh and hot.'],
-    ['you', 'Guitar Rockstar', "Delicious!!"],
-    ['you', 'Guitar Rockstar', "Let's sing the pizza song:"],
-    ['you', 'Guitar Rockstar', "Oh pizza, pizza, fill up my mouth..."],
-    ['peer', 'Pizza Delivery Boy', "pizza, pizza I LOVE YOU pizza!"],
+    ['you', 'Pizza Delivery Boy', 'hello Guitar Rockstar'],
+    ['you', 'Pizza Delivery Boy', 'Can you sing me a song?'],
+    ['peer', 'Guitar Rockstar', "I'll sing for a smoking hot pizza"],
+    ['you', 'Pizza Delivery Boy', "Okay, here's your pizza."],
+    ['peer', 'Guitar Rockstar', "Gee thanks!"],
+    ['peer', 'Guitar Rockstar', "I'll sing the pizza song!"],
+    ['you', 'Pizza Delivery Boy', "THANKS! I LOVE THE PIZZA SONG!"]
   ],
   message: ''
 }

@@ -91,7 +91,7 @@ const ChatroomPage = ({socket, randomTip}) => {
         <div className={`${waitingForPeer ? 'low-opacity' : ''}`}>
           <p className="your-character-text">Your character: </p>
           <input className={`choose-char ${waitingForPeer ? 'not-clickable' : ''}`} value={chat.you} placeholder="Ex: Crazy Tour Guide" maxLength="30" 
-          disabled={waitingForPeer} onChange={e => setChat({...chat, you: e.target.value})} autoFocus/>
+          disabled={waitingForPeer} onChange={e => setChat({...chat, you: e.target.value})}/>
         </div>
       </>
       }
