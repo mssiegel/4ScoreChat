@@ -101,6 +101,11 @@
   margin-block-end: 0;
 }
 
+.best-time {
+  color: red;
+  font-weight: bold;
+}
+
 #cancel-chat-btn {
   background-color: #f00;
   margin: 10px;

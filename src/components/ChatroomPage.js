@@ -87,7 +87,7 @@ const ChatroomPage = ({socket, randomTip}) => {
       <p id="tip">Tip: {randomTip}</p>
       {!chatInSession &&
       <>
-        <button className={`suggest-character btn ${waitingForPeer ? 'disabled' : ''}`} onClick={suggestCharacter}>Suggest <MoodIcon style={characterIcon}/></button>
+        <button className={`suggest-character btn ${waitingForPeer ? 'disabled' : ''}`} onClick={waitingForPeer ? null: suggestCharacter}>Suggest <MoodIcon style={characterIcon}/></button>
         <div className={`${waitingForPeer ? 'low-opacity' : ''}`}>
           <p className="your-character-text">Your character: </p>
           <input className={`choose-char ${waitingForPeer ? 'not-clickable' : ''}`} value={chat.you} placeholder="Ex: Crazy Tour Guide" maxLength="30" 
@@ -104,9 +104,9 @@ const ChatroomPage = ({socket, randomTip}) => {
       }
       {waitingForPeer && 
         <div className="waiting-for-peer"> 
-          <p className="waiting-title">Looking for someone to pair you with...</p>
+          <p className="waiting-note">Best chatting time is <span className="best-time">Sundays at 8:00pm EST</span>. Come then to get matched instantly!</p>
           <button className="btn" id='cancel-chat-btn' onClick={cancelSearch}>Cancel</button>
-          <p className="waiting-note">(Prime chatting time is Sundays at 8pm EST)</p>
+          <p className="waiting-title">Looking for someone to pair you with...</p>          
         </div>
       }
     </section>
