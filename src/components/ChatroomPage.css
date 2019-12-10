@@ -11,6 +11,12 @@
   margin-bottom: 50px;
 }
 
+.tip-best-time {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+}
+
 .suggest-character {
   background: #87002A;
   width: 180px;
