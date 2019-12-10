@@ -77,15 +77,15 @@ const ChatroomPage = ({socket, randomTip}) => {
   const [waitingForPeer, setWaitingForPeer] = useState(false)
   const [chatInSession, setChatInSession] = useState(false)
 
-  const [chat, setChat] = useState({title: '', you: '', peer: '', conversation: [], message: ''})
+  const [chat, setChat] = useState({title: '', you: '', peer: '', conversation: []})
 
 
   return (
     <>
     <section className="chatroom-page-wrapper">
       <h1 className="page-title">Chatroom</h1>
-      <p id="tip">Tip: Add to your calendar!! <span className="tip-best-time">Sunday 8:00pm EST</span>. Guaranteed to be people online at that time, every Sunday.</p>
-      {/*{randomTip}*/}
+      <p id="tip">Add to your calendar!! <span className="tip-best-time">Sunday 8:00pm EST</span>. Guaranteed to be people online at that time, every Sunday.</p>
+      {/* Have temporarily replaced randomTip with Best Chatting Time    Tip: {randomTip}*/}
 
       {!chatInSession &&
       <>

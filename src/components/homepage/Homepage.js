@@ -14,8 +14,7 @@ const firstChat = {
     ['peer', 'Vampire Hunter', "hmmm, I challenge you to a duel"],
     ['you', 'Toy Store Owner', "haha bring it on bub"],
     ['peer', 'Vampire Hunter', "with pleasure"]
-  ],
-  message: ''
+  ]
 }
 
 const secondChat = {
@@ -31,8 +30,7 @@ const secondChat = {
     ['peer', 'Guitar Rockstar', "Gee thanks!"],
     ['peer', 'Guitar Rockstar', "I'll sing the pizza song!"],
     ['you', 'Pizza Delivery Boy', "THANKS! I LOVE THE PIZZA SONG!"]
-  ],
-  message: ''
+  ]
 }
 
 const HomePage = () => {

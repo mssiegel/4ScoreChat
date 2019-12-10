@@ -15,6 +15,7 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
   const [chatEnded, setChatEnded] = useState(false)
   const [chatEnder, setChatEnder] = useState()
   const [peerTyping, setPeerTyping] = useState(false)
+  const [message, setMessage] = useState('')
 
   const messageInput = useRef(null)
 
@@ -54,12 +55,13 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
 
   function sendMessage(e) {
     e.preventDefault()
-    if (chat.you && chat.message) {
-      setChat({...chat, message: '', conversation: [...chat.conversation, ['you', chat.you, chat.message]]})
+    if (chat.you && message) {
+      setChat({...chat, conversation: [...chat.conversation, ['you', chat.you, message]]})
+      setMessage('')
       if (socket) {
         socket.emit('chat message', {
           userName: chat.you,
-          message: chat.message
+          message
         })
       scrollToBottomOfChat()
       }
@@ -74,7 +76,7 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
   }
 
   function userTyping(e) {
-    setChat({...chat, message: e.target.value})
+    setMessage(e.target.value)
     if (socket) socket.emit('typing', chat.you)
   }
 
@@ -112,14 +114,14 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
           {chatEnded ? 
             <>
             <p className='left-chat-message'>{chatEnder} left the chat</p>
-            <button className='start-new-chat btn' onClick={() => {setChat({...chat, conversation: [], message: ''}); setChatInSession(false)}}>Erase chat</button>
+            <button className='start-new-chat btn' onClick={() => {setChat({...chat, conversation: []}); setChatInSession(false)}}>Erase chat</button>
             </> 
             :
             <>
             <p className='peer-typing-notification'>{peerTyping && `${peerTyping} is typing...`}</p> 
             <form onSubmit={sendMessage}>
               <input className='username' value={chat.you} placeholder='Your Character' maxLength="30" onChange={e => setChat({...chat, you: e.target.value})}/>
-              <input className='message' value={chat.message} placeholder='Say something' maxLength="75" onChange={userTyping} ref={messageInput}/>
+              <input className='message' value={message} placeholder='Say something' maxLength="75" onChange={userTyping} ref={messageInput}/>
               <Fab size="small" type='submit' color="secondary" style={{marginLeft: '10px', background: "#940000"}}><SendIcon /></Fab>
             </form>
             </>
