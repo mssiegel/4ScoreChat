@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import { Link } from "gatsby"
 import "./Homepage.css"
 import Chatbox from '../Chatbox'
@@ -35,9 +35,6 @@ const secondChat = {
 
 const HomePage = () => {
 
-  const [chat1, setChat1] = useState(firstChat)
-  const [chat2, setChat2] = useState(secondChat)
-
   return (
     <>
     <section id="first-page" className="grid">
@@ -50,7 +47,7 @@ const HomePage = () => {
           </Link>
         </div>
         <div></div>
-      <Chatbox chat={chat1} setChat={setChat1} noBottom={true}/>
+      <Chatbox chat={firstChat} noBottom={true}/>
       <div></div>
     </section>
     <section id="second-page" className="grid">
@@ -59,7 +56,7 @@ const HomePage = () => {
         <ListItems />
       </div>
       <div></div>
-      <Chatbox chat={chat2} setChat={setChat2} noBottom={true}/>
+      <Chatbox chat={secondChat} noBottom={true}/>
       <div></div>
     </section>
     <div id="home-footer">
