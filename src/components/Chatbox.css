@@ -17,20 +17,17 @@
   min-height: 260px;
 }
 
-.chat-buttons {
+.sticky-chat-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: sticky;
   top: 0;
 }
 
-.chat-buttons .suggest-character {
-  width: 140px;
-}
-
 .end-chat {
   background: red;
-  width: 120px;
+  width: 80px;
+  height: 35px;
 }
 
 .chatbox-text-wrapper {

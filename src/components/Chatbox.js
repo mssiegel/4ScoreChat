@@ -11,7 +11,7 @@ const characterIcon = {
   marginLeft: '5px'
 }
 
-const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSession, socket, noBottom}) => { 
+const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket, noBottom}) => { 
   const [chatEnded, setChatEnded] = useState(false)
   const [chatEnder, setChatEnder] = useState()
   const [peerTyping, setPeerTyping] = useState(false)
@@ -102,8 +102,7 @@ const Chatbox = ({chat, chatInSession, setChat, suggestCharacter, setChatInSessi
       <h2 className={`sample-chat-subtitle`} style={{color: chat.titleColor}}>{chat.title}</h2>
       <div className="chatbox">
         {(chatInSession && !chatEnded)  &&
-          <div className="chat-buttons">
-            <button className="suggest-character btn" onClick={suggestCharacter}>Suggest <MoodIcon style={characterIcon}/></button>
+          <div className="sticky-chat-buttons">
             <button className="end-chat btn" onClick={endChat}>End</button>
           </div>
         }

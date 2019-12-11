@@ -84,7 +84,7 @@ const ChatroomPage = ({socket, randomTip}) => {
     <>
     <section className="chatroom-page-wrapper">
       <h1 className="page-title">Chatroom</h1>
-      <p id="tip">Add to your calendar!! <span className="tip-best-time">Sunday 8:00pm EST</span>. Guaranteed to be people online at that time, every Sunday.</p>
+      <p id="tip">Add to your calendar!! &nbsp;<span className="tip-best-time">Sunday 8:00pm EST</span>. Guaranteed to be people online at that time, every Sunday.</p>
       {/* Have temporarily replaced randomTip with Best Chatting Time    Tip: {randomTip}*/}
 
       {!chatInSession &&
@@ -108,7 +108,7 @@ const ChatroomPage = ({socket, randomTip}) => {
         <div className="waiting-for-peer"> 
           <p className="waiting-title">Looking for someone...</p>          
           <button className="btn" id='cancel-chat-btn' onClick={cancelSearch}>Cancel</button>
-          <p className="waiting-note">Best chatting time is <span className="best-time">Sundays at 8:00pm EST</span>. Come then to get matched instantly!</p>
+          <p className="waiting-note">Best chatting time is <span className="best-time">Sunday 8:00pm EST</span>. Come then to get matched instantly!</p>
         </div>
       }
     </section>
