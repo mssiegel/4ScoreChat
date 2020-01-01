@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import "./Homepage.css"
 import Chatbox from '../Chatbox'
 import ListItems from './ListItems'
+import EmailSignup from './EmailSignup'
 
 const firstChat = {
   title: 'Be Anyone',
@@ -50,6 +51,9 @@ const HomePage = () => {
       <Chatbox chat={firstChat} noBottom={true}/>
       <div></div>
     </section>
+
+    <EmailSignup />
+
     <section id="second-page" className="grid">
       <div></div>
       <div className="list-items-container">

@@ -2,14 +2,7 @@ import React, {useState, useEffect, useRef} from "react"
 import "./Chatbox.css"
 import Fab from '@material-ui/core/Fab'
 import SendIcon from '@material-ui/icons/Send'
-import MoodIcon from '@material-ui/icons/Mood'
 let eraseTypingMessage
-
-const characterIcon = {
-  color: 'white',
-  verticalAlign: 'middle',
-  marginLeft: '5px'
-}
 
 const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket, noBottom}) => { 
   const [chatEnded, setChatEnded] = useState(false)
