@@ -46,6 +46,7 @@ const HomePage = () => {
           <Link to="/chatroom/">
             <button className="enter-chatroom-button btn">Enter Chatroom</button>
           </Link>
+          <p id="homepage-tip">Most popular time is <span className="homepage-tip-best-time">Sunday 8:00pm EST</span></p>
         </div>
         <div></div>
       <Chatbox chat={firstChat} noBottom={true}/>

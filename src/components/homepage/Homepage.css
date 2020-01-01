@@ -34,6 +34,16 @@
   text-decoration: none;
 }
 
+#homepage-tip {
+  padding-top: 25px;
+  color: white;
+}
+
+.homepage-tip-best-time {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
 #first-page {
   padding-bottom: 50px;
 }
