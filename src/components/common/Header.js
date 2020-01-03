@@ -10,7 +10,7 @@ const Header = () => (
     <div className="nav-container">
       <h1 className="nav-title">
         <Link to="/" className="nav-title-link">
-          <img id="nav-wizard-hat" src={logo} alt="4ScoreChat's logo"/>4Score Chat 
+          <img id="nav-wizard-hat" src={logo} alt="4ScoreChat's logo"/>4ScoreChat 
         </Link>
       </h1>     
 
