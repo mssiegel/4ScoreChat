@@ -8,7 +8,7 @@ import AboutPage from "../components/AboutPage"
 const About = () => (
   <Layout>
     <SEO title="About"
-      description="Clean instant improv. We request all chats stay somewhat clean and family-friendly."
+      description="4ScoreChat provides clean instant improv. We request all chats stay somewhat clean and family-friendly."
     />
     <AboutPage/>
   </Layout>
