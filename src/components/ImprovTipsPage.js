@@ -7,12 +7,12 @@ const yesAnd = {
   title: 'Yes, And...',
   lesson: "Always accept as fact what the other person says. Then add a bit of info to it. So if someone tells you that he's ready to fight against an evil goblin army, then acknowledge that info and build on it. Keep doing so and you'll end up creating a fascinating storyline that continuously grows and expands.",
   goodImprov: [
-    ['Goblin King', "Roarrrr!! I'm ready for battle"],
+    ['Goblin king', "Roarrrr!! I'm ready for battle"],
     ['Farmer', "Me too!! My blood is boiling!"],
     ['Farmer', "I brought my steam-powered jumbo ax"]
   ],
   badImprov: [
-    ['Goblin King', "Roarrrr!! I'm ready for battle"],
+    ['Goblin king', "Roarrrr!! I'm ready for battle"],
     ['Farmer', "What are you talking about? There's no fight going on."]
   ]
 }
@@ -21,12 +21,12 @@ const startPositive = {
   title: 'Start on a Positive Note',
   lesson: "Don't start with a character called 'sad sheriff' or 'boring teacher'. Those kinds of lackluster starts usually lead to boring scenes. Instead, pick character names such as 'Sam the Sheriff' or use adjectives such as 'tiny sherriff' or 'teacher from Mars.' The same goes regarding your first statements. Don't start a scene by saying 'you are weird and uncool.' Instead start with something exciting like, 'I LOVE your clothing style!",
   goodImprov: [
-    ['Big Knight', "WOW! Your Muscles are soooo HUGE."],
-    ['Store Owner', "That's right! Every day I do 300 pushups!"]
+    ['Big knight', "WOW! Your Muscles are soooo HUGE."],
+    ['Store owner', "That's right! Every day I do 300 pushups!"]
   ],
   badImprov: [
-    ['Sad Alien', "Hi, I am lost"],
-    ['Karate Dude', "Hi, I am an unhappy karate person"]
+    ['Sad alien', "Hi, I am lost"],
+    ['Karate dude', "Hi, I am an unhappy karate person"]
   ]
 }
 

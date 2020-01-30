@@ -7,30 +7,30 @@ import EmailSignup from './EmailSignup'
 
 const firstChat = {
   title: 'Be Anyone',
-  you: 'Toy Store Owner',
-  peer: 'Vampire Hunter',
+  you: 'Toy store owner',
+  peer: 'Vampire hunter',
   conversation : [
-    ['peer', 'Vampire Hunter', 'nice dagger you got'],
-    ['you', 'Toy Store Owner', "thanks. It's made of strong plastic."],
-    ['peer', 'Vampire Hunter', "hmmm, I challenge you to a duel"],
-    ['you', 'Toy Store Owner', "haha bring it on bub"],
-    ['peer', 'Vampire Hunter', "with pleasure"]
+    ['peer', 'Vampire hunter', 'nice dagger you got'],
+    ['you', 'Toy store owner', "thanks. It's made of strong plastic."],
+    ['peer', 'Vampire hunter', "hmmm, I challenge you to a duel"],
+    ['you', 'Toy store owner', "haha bring it on bub"],
+    ['peer', 'Vampire hunter', "with pleasure"]
   ]
 }
 
 const secondChat = {
   title: 'Be Present',
   titleColor: 'black',
-  you: 'Pizza Delivery Boy',
-  peer: 'Guitar Rockstar',
+  you: 'Pizza delivery boy',
+  peer: 'Guitar rockstar',
   conversation : [
-    ['you', 'Pizza Delivery Boy', 'hello Guitar Rockstar'],
-    ['you', 'Pizza Delivery Boy', 'Can you sing me a song?'],
-    ['peer', 'Guitar Rockstar', "I'll sing for a smoking hot pizza"],
-    ['you', 'Pizza Delivery Boy', "Okay, here's your pizza."],
-    ['peer', 'Guitar Rockstar', "Gee thanks!"],
-    ['peer', 'Guitar Rockstar', "I'll sing the pizza song!"],
-    ['you', 'Pizza Delivery Boy', "THANKS! I LOVE THE PIZZA SONG!"]
+    ['you', 'Pizza delivery boy', 'hello Guitar rockstar'],
+    ['you', 'Pizza delivery boy', 'Can you sing me a song?'],
+    ['peer', 'Guitar rockstar', "I'll sing for a smoking hot pizza"],
+    ['you', 'Pizza delivery boy', "Okay, here's your pizza."],
+    ['peer', 'Guitar rockstar', "Gee thanks!"],
+    ['peer', 'Guitar rockstar', "I'll sing the pizza song!"],
+    ['you', 'Pizza delivery boy', "THANKS! I LOVE THE PIZZA SONG!"]
   ]
 }
 
