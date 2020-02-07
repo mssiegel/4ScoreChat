@@ -2,7 +2,6 @@ import React from "react"
 import './common/common.css'
 import './ImprovTipsPage.css'
 
-
 const yesAnd = {
   title: 'Yes, And...',
   lesson: "Always accept as fact what the other person says. Then add a bit of info to it. So if someone tells you that he's ready to fight against an evil goblin army, then acknowledge that info and build on it. Keep doing so and you'll end up creating a fascinating storyline that continuously grows and expands.",
@@ -45,36 +44,7 @@ const oneLineAtATime = {
   ]
 }
 
-const Lesson = ({lessonContent}) => {
-  const {title, lesson, goodImprov, badImprov} = lessonContent
-  
-  const renderExample = conversation => (
-    <>
-    {conversation.map(([name, message], i) => 
-      (<div key={i}>{name}: <i>{message}</i></div>)
-    )}
-    </>
-  )
-  
-  return (
-    <>
-      <div className='guide-title'>{title}</div>
-      <p>{lesson}</p>
-      <div className='good'>Good Improv:</div>
-      {renderExample(goodImprov)}
-      <br/>
-
-      <div className='bad'>Bad Improv:</div>
-      {renderExample(badImprov)}
-      <br/><br/>
-    </>
-  )
-}
-
-
-
 const ImprovTipsPage = () => {
-  
   return (
     <>
     <section className='page-wrapper'>
@@ -86,6 +56,24 @@ const ImprovTipsPage = () => {
       </div>
     </section>
     <div className="empty-space-on-bottom"></div>
+    </>
+  )
+}
+
+const Lesson = ({lessonContent}) => {
+  const {title, lesson, goodImprov, badImprov} = lessonContent
+  const renderChat = ([name, message], i) => <div key={i}>{name}: <i>{message}</i></div>
+  return (
+    <>
+      <div className='guide-title'>{title}</div>
+      <p>{lesson}</p>
+      <div className='good'>Good Improv:</div>
+      {goodImprov.map(renderChat)}
+      <br/>
+
+      <div className='bad'>Bad Improv:</div>
+      {badImprov.map(renderChat)}
+      <br/><br/>
     </>
   )
 }
