@@ -114,7 +114,7 @@ const ChatroomPage = ({socket, randomTip}) => {
     </section>
     {chatInSession &&
       <div className="center-chatbox">
-        <Chatbox chat={chat} chatInSession={chatInSession} suggestCharacter={suggestCharacter} setChat={setChat} setChatInSession={setChatInSession} socket={socket} liveChat={true}/>
+        <Chatbox chat={chat} chatInSession={chatInSession} setChat={setChat} setChatInSession={setChatInSession} socket={socket} liveChat={true}/>
       </div>
     }
     </>
