@@ -10,7 +10,6 @@ const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket}) => {
   const [chatEnded, setChatEnded] = useState(false)
   const [chatEnder, setChatEnder] = useState()
   const [peerTyping, setPeerTyping] = useState(false)
-  const [message, setMessage] = useState('')
 
   const messageInput = useRef(null)
 
@@ -48,31 +47,10 @@ const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket}) => {
     }
   }, [])
 
-  function sendMessage(e) {
-    e.preventDefault()
-    if (chat.you && message) {
-      setChat({...chat, conversation: [...chat.conversation, ['you', chat.you, message]]})
-      setMessage('')
-      if (socket) {
-        socket.emit('chat message', {
-          userName: chat.you,
-          message
-        })
-      scrollToBottomOfChat()
-      }
-    }
-    messageInput.current.focus()
-  }
-
   function endChat() {
     if (socket) socket.emit('end chat')
     setChatEnded(true)
     setChatEnder('You')
-  }
-
-  function userTyping(e) {
-    setMessage(e.target.value)
-    if (socket) socket.emit('typing', chat.you)
   }
 
   function scrollToBottomOfChat() {
@@ -103,7 +81,7 @@ const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket}) => {
             :
             <>
             <p className='peer-typing-notification'>{peerTyping && `${peerTyping} is typing...`}</p>
-            <SendMessageForm sendMessage={sendMessage} chat={chat} setChat={setChat} message={message} userTyping={userTyping} messageInput={messageInput}/>
+            <SendMessageForm chat={chat} socket={socket} setChat={setChat} scrollToBottomOfChat={scrollToBottomOfChat} messageInput={messageInput}/>
             </>
           }
         </div>
