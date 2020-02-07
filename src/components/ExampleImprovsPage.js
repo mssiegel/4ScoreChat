@@ -1,6 +1,6 @@
 import React from "react"
 import './ExampleImprovsPage.css'
-import Chatbox from './Chatbox'
+import Chatbox from './chatbox/Chatbox'
 
 const firstExample = {
   title: "The Hypnotist's Watch",

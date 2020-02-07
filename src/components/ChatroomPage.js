@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react"
 import "./ChatroomPage.css"
 import MoodIcon from '@material-ui/icons/Mood'
-import Chatbox from './Chatbox'
+import Chatbox from './chatbox/Chatbox'
 
 const ChatroomPage = ({socket, randomTip}) => {
   
@@ -114,7 +114,7 @@ const ChatroomPage = ({socket, randomTip}) => {
     </section>
     {chatInSession &&
       <div className="center-chatbox">
-        <Chatbox chat={chat} chatInSession={chatInSession} suggestCharacter={suggestCharacter} setChat={setChat} setChatInSession={setChatInSession} socket={socket} />
+        <Chatbox chat={chat} chatInSession={chatInSession} suggestCharacter={suggestCharacter} setChat={setChat} setChatInSession={setChatInSession} socket={socket} liveChat={true}/>
       </div>
     }
     </>

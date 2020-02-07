@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./Homepage.css"
-import Chatbox from '../Chatbox'
+import Chatbox from '../chatbox/Chatbox'
 import ListItems from './ListItems'
 import EmailSignup from './EmailSignup'
 
@@ -49,7 +49,7 @@ const HomePage = () => {
           <p id="homepage-tip">Most popular time is <span className="homepage-tip-best-time">Sunday 8:00pm EST</span></p>
         </div>
         <div></div>
-      <Chatbox chat={firstChat} noBottom={true}/>
+      <Chatbox chat={firstChat}/>
       <div></div>
     </section>
 
@@ -61,7 +61,7 @@ const HomePage = () => {
         <ListItems />
       </div>
       <div></div>
-      <Chatbox chat={secondChat} noBottom={true}/>
+      <Chatbox chat={secondChat}/>
       <div></div>
     </section>
     <div id="home-footer">

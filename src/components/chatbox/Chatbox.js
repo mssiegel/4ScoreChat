@@ -1,10 +1,11 @@
 import React, {useState, useEffect, useRef} from "react"
 import "./Chatbox.css"
+import ChatboxConversation from './ChatboxConversation'
 import Fab from '@material-ui/core/Fab'
 import SendIcon from '@material-ui/icons/Send'
 let eraseTypingMessage
 
-const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket, noBottom}) => { 
+const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket, liveChat}) => { 
   const [chatEnded, setChatEnded] = useState(false)
   const [chatEnder, setChatEnder] = useState()
   const [peerTyping, setPeerTyping] = useState(false)
@@ -29,7 +30,7 @@ const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket, noBott
 
       socket.on('typing', userName => {
         setPeerTyping(userName)
-        //clear old timeout if applicable
+        //clears old timeout if applicable
         if (eraseTypingMessage) clearTimeout(eraseTypingMessage)
         eraseTypingMessage = setTimeout(() => setPeerTyping(false), 4000)
       })
@@ -77,18 +78,6 @@ const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket, noBott
     if(messageInput.current) messageInput.current.scrollIntoView({behavior: "smooth"})
   }
 
-  const renderConversation = ({peer, conversation}) => (
-      <div className={`chatbox-text-wrapper ${chatEnded ? 'low-opacity' : ''}`}>
-        <div className="peer-announcement">
-          <p className='grey'>You matched with <span className="peer">{peer}</span>...</p>
-          <p className='grey'>{chat.startTime}</p>
-        </div>
-        {conversation.map(([person, character, message], i) => 
-          (<p key={i}><span className={person}>{character}: </span><span className="chat-text">{message}</span></p>)
-        )}
-      </div>
-  )
-  
   return (
     <>
     <div className="sample-chat-container">
@@ -99,9 +88,9 @@ const Chatbox = ({chat, chatInSession, setChat, setChatInSession, socket, noBott
             <button className="end-chat btn" onClick={endChat}>End</button>
           </div>
         }
-        {renderConversation(chat)}
+        <ChatboxConversation chat={chat} chatEnded={chatEnded}/>
       </div>
-      {!noBottom && ( 
+      {liveChat && ( 
         <div className='chatbox-bottom'>
           {chatEnded ? 
             <>
