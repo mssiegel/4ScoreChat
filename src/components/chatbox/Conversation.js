@@ -1,7 +1,7 @@
 import React from "react"
-import "./Chatbox.css"
+import "./Conversation.css"
 
-const ChatboxConversation = ({chat, chatEnded}) => {
+const Conversation = ({chat, chatEnded}) => {
  const {peer, conversation} = chat
   return (
       <div className={`chatbox-text-wrapper ${chatEnded ? 'low-opacity' : ''}`}>
@@ -16,4 +16,4 @@ const ChatboxConversation = ({chat, chatEnded}) => {
   )
 }
 
-export default ChatboxConversation
+export default Conversation

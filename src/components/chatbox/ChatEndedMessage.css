@@ -1,0 +1,15 @@
+.left-chat-message {
+  border-top: 1px grey dashed;
+  padding-top: 10px;
+  font-size: 32px;
+  color: #87002A;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.start-new-chat {
+  background: black;
+  width: 180px;
+  line-height: 2.5;
+  margin-bottom: 15px;
+}

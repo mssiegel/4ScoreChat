@@ -1,0 +1,34 @@
+.chatbox-text-wrapper {
+  padding: 10px 10px 0 10px;
+  font-size: 16px;
+}
+
+.chatbox-text-wrapper p {
+  margin-bottom: 0;
+}
+
+.peer-announcement {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey {
+  color: grey;
+  font-style: italic;
+}
+
+.peer {
+  font-weight: bold;
+  color: red;
+  letter-spacing: .25px;
+}
+
+.you {
+  font-weight: bold;
+  color: #0070FF;
+  letter-spacing: .25px;
+}
+
+.chat-text {
+  color: #696969;
+}
