@@ -1,0 +1,39 @@
+.chatroom-page-wrapper {
+  color: white;
+  text-align: center;
+}
+
+#tip {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 50px;
+}
+
+.tip-best-time {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.no-internet {
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+  padding: 10px;
+  color: white;
+  font-size: 25px;
+  line-height: 1.3;
+  border: 2px dashed red;
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: .2;
+  }
+}
+
+.center-chatbox {
+  display: flex;
+  justify-content: center;
+}

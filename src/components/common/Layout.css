@@ -27,11 +27,6 @@ body {
   opacity: 0.7;
 }
 
-.center-chatbox {
-  display: flex;
-  justify-content: center;
-}
-
 
 /* Default Gatsby Styles */
 

@@ -1,0 +1,16 @@
+.suggest-character {
+  background: #87002A;
+  width: 180px;
+  height: 45px;
+}
+
+.start-chat {
+  line-height: 4;
+  width: 183px;
+  background: black;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}

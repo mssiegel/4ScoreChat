@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/common/Layout"
 import SEO from "../components/seo"
-import ChatroomPage from "../components/ChatroomPage"
+import ChatroomPage from "../components/chatroomPage/ChatroomPage"
 import io from 'socket.io-client'
 
 //Initialize socket outside of Chatroom component so as to keep socket unchanged even if user clicks Chatroom link in navbar
