@@ -6,10 +6,7 @@ import SEO from "../components/seo"
 import ChatroomPage from "../components/ChatroomPage"
 import io from 'socket.io-client'
 
-//Set up socket.io connection to server
 //Initialize socket outside of Chatroom component so as to keep socket unchanged even if user clicks Chatroom link in navbar
-//If client is at 4scorechat domain name then use heroku backend server, else use local host backend server
-//const serverUrl = window.location.href === 'https://www.4scorechat.com/' ? 'https://scorechat.herokuapp.com/' : 'http://localhost:8000'
 const serverUrl = 'https://scorechat.herokuapp.com/'  
 const socket = io(serverUrl)
 
