@@ -13,24 +13,30 @@
   margin-bottom: 5px;
   font-weight: normal;
 }
- 
+
 #intro-subtitle {
   color: white;
   font-weight: normal;
   margin-bottom: 12px;
 }
 
-.enter-chatroom-button {
+.visit-chatroom-image {
+  width: 250px;
+  margin: 0px auto 10px auto;
+}
+
+.visit-chatroom-button {
   background: black;
-  width: 180px;
-  height: 45px;
+  width: 200px;
+  height: 70px;
 }
 
 .enter-chatroom-button:hover {
   color: #ccc;
 }
 
-.intro a, #home-footer a {
+.intro a,
+#home-footer a {
   text-decoration: none;
 }
 
@@ -49,7 +55,7 @@
 }
 
 #second-page {
-  background: #F6F6FA;
+  background: #f6f6fa;
   padding-top: 50px;
 }
 
@@ -58,17 +64,16 @@
 }
 
 #home-footer {
-  background: #F6F6FA;
-  padding-top: 60px;
+  background: #f6f6fa;
+  padding-top: 25px;
   padding-bottom: 60px;
   text-align: center;
 }
 
 .call-to-action {
   font-size: 40px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
-
 
 @media screen and (min-width: 980px) {
   .grid {
@@ -96,4 +101,7 @@
     font-size: 50px;
   }
 
+  #home-footer {
+    padding-top: 60px;
+  }
 }
