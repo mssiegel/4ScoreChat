@@ -56,7 +56,9 @@ const HomePage = () => {
           </p>
         </div>
         <div></div>
-        <Chatbox chat={firstChat} />
+        <div style={{ alignSelf: 'center' }}>
+          <Chatbox chat={firstChat} />
+        </div>
         <div></div>
       </section>
 
