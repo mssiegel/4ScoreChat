@@ -16,11 +16,12 @@ const EmailSignup = () => {
     borderRadius: '5px'
   }
 
-  const largeFont = {
+  const signupText = {
+    color: '#0070FF',
     fontSize: '21px'
   }
 
-  const mediumFont = {
+  const emailInput = {
     fontSize: '17px'
   }
 
@@ -34,7 +35,7 @@ const EmailSignup = () => {
   }
 
   const submitButton = {
-    ...largeFont,
+    fontSize: '21px',
     background: '#87002A'
   }
 
@@ -53,8 +54,8 @@ const EmailSignup = () => {
           style={formNoBottomMargin}
         >
           <div id='mc_embed_signup_scroll'>
-            <label htmlFor='mce-EMAIL' style={largeFont}>
-              Sign up to get notified when we release new features
+            <label htmlFor='mce-EMAIL' style={signupText}>
+              Get notified when we release new features
             </label>
             <input
               type='email'
@@ -64,7 +65,7 @@ const EmailSignup = () => {
               id='mce-EMAIL'
               placeholder='email address'
               required
-              style={mediumFont}
+              style={emailInput}
             />
             {/*<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->*/}
             <div style={fakeInput} aria-hidden='true'>
