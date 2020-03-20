@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Chatbox.css'
+import StickyButtons from './StickyButtons'
 import Conversation from './Conversation'
 import ChatEndedMessage from './ChatEndedMessage'
 import SendMessageForm from './SendMessageForm'
 
 let eraseTypingMessage
 
-const Chatbox = ({ chat, chatInSession, setChat, setChatInSession, socket }) => {
+const Chatbox = ({ chat, setChat, setChatInSession, socket }) => {
   const [chatEnded, setChatEnded] = useState(false)
   const [chatEnder, setChatEnder] = useState()
   const [peerTyping, setPeerTyping] = useState(false)
@@ -35,7 +36,7 @@ const Chatbox = ({ chat, chatInSession, setChat, setChatInSession, socket }) => 
       })
     }
 
-    if (chatInSession) messageInput.current.focus()
+    if (!chatEnded) messageInput.current.focus()
 
     return () => {
       if (socket) {
@@ -64,37 +65,27 @@ const Chatbox = ({ chat, chatInSession, setChat, setChatInSession, socket }) => 
   return (
     <>
       <div className='sample-chat-container'>
-        <h2 className={`sample-chat-subtitle`} style={{ color: chat.titleColor }}>
-          {chat.title}
-        </h2>
         <div className='chatbox'>
-          {chatInSession && !chatEnded && (
-            <div className='sticky-chat-buttons'>
-              <button className='end-chat btn' onClick={endChat}>
-                End
-              </button>
-            </div>
-          )}
+          {!chatEnded && <StickyButtons endChat={endChat} />}
           <Conversation chat={chat} chatEnded={chatEnded} />
         </div>
-        {chatInSession && (
-          <div className='chatbox-bottom'>
-            {chatEnded ? (
-              <ChatEndedMessage chatEnder={chatEnder} eraseChat={eraseChat} />
-            ) : (
-              <>
-                <p className='peer-typing-notification'>{peerTyping && `${peerTyping} is typing...`}</p>
-                <SendMessageForm
-                  chat={chat}
-                  socket={socket}
-                  setChat={setChat}
-                  scrollToBottomOfChat={scrollToBottomOfChat}
-                  messageInput={messageInput}
-                />
-              </>
-            )}
-          </div>
-        )}
+
+        <div className='chatbox-bottom'>
+          {chatEnded ? (
+            <ChatEndedMessage chatEnder={chatEnder} eraseChat={eraseChat} />
+          ) : (
+            <>
+              <p className='peer-typing-notification'>{peerTyping && `${peerTyping} is typing...`}</p>
+              <SendMessageForm
+                chat={chat}
+                socket={socket}
+                setChat={setChat}
+                scrollToBottomOfChat={scrollToBottomOfChat}
+                messageInput={messageInput}
+              />
+            </>
+          )}
+        </div>
       </div>
     </>
   )

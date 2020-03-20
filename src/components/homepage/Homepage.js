@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import './Homepage.css'
 import heroBoy from '../../images/hero-boy.png'
-import Chatbox from '../chatbox/Chatbox'
+import SampleChatbox from '../chatbox/SampleChatbox'
 import ListItems from './ListItems'
 import EmailSignup from './EmailSignup'
 
@@ -56,7 +56,7 @@ const HomePage = () => {
           </p>
         </div>
         <div></div>
-        <Chatbox chat={firstChat} />
+        <SampleChatbox chat={firstChat} />
         <div></div>
       </section>
 
@@ -68,7 +68,7 @@ const HomePage = () => {
           <ListItems />
         </div>
         <div></div>
-        <Chatbox chat={secondChat} />
+        <SampleChatbox chat={secondChat} />
         <div></div>
       </section>
       <div id='home-footer'>

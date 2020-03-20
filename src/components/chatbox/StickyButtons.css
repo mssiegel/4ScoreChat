@@ -1,0 +1,12 @@
+.sticky-chat-buttons {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+}
+
+.end-chat {
+  background: red;
+  width: 80px;
+  height: 35px;
+}

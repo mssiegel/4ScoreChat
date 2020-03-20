@@ -1,6 +1,6 @@
 import React from 'react'
 import './ExampleImprovsPage.css'
-import Chatbox from './chatbox/Chatbox'
+import SampleChatbox from './chatbox/SampleChatbox'
 
 const firstExample = {
   title: "The Hypnotist's Watch",
@@ -103,10 +103,10 @@ const ExampleImprovsPage = () => {
         <h1 className='page-title examples-padding-bottom'>Example Improvs</h1>
 
         <div className='center-chatbox examples-padding-bottom'>
-          <Chatbox chat={firstExample} noBottom={true} />
+          <SampleChatbox chat={firstExample} />
         </div>
         <div className='center-chatbox examples-padding-bottom'>
-          <Chatbox chat={secondExample} noBottom={true} />
+          <SampleChatbox chat={secondExample} />
         </div>
       </section>
     </>

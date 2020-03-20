@@ -10,7 +10,7 @@ const ChatroomPage = ({ socket, randomTip }) => {
   const [isInternet, setIsInternet] = useState(true)
   const [waitingForPeer, setWaitingForPeer] = useState(false)
   const [chatInSession, setChatInSession] = useState(false)
-  const [chat, setChat] = useState({ title: '', you: '', peer: '', conversation: [] })
+  const [chat, setChat] = useState({ you: '', peer: '', conversation: [] })
 
   useEffect(() => {
     socket.on('chat start', peersName => {
@@ -64,13 +64,7 @@ const ChatroomPage = ({ socket, randomTip }) => {
       </section>
       {chatInSession && (
         <div className='center-chatbox'>
-          <Chatbox
-            chat={chat}
-            chatInSession={chatInSession}
-            setChat={setChat}
-            setChatInSession={setChatInSession}
-            socket={socket}
-          />
+          <Chatbox chat={chat} setChat={setChat} setChatInSession={setChatInSession} socket={socket} />
         </div>
       )}
     </>
