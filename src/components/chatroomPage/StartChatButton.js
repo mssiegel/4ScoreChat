@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './ChatroomPageButtons.css'
 
-const StartChatButton = ({ chat, setIsInternet, setWaitingForPeer, socket }) => {
+const StartChatButton = ({ chat, setWaitingForPeer, socket }) => {
+  const [isInternet, setIsInternet] = useState(true)
+
   async function startChatBtnClicked() {
     const isInternet = await checkInternet()
     if (isInternet) {
@@ -19,19 +21,27 @@ const StartChatButton = ({ chat, setIsInternet, setWaitingForPeer, socket }) => 
       return true
     } catch (e) {
       setIsInternet(false)
-      setTimeout(() => setIsInternet(true), 5000)
+      setTimeout(() => setIsInternet(true), 8000)
       return false
     }
   }
 
   return (
-    <button
-      className={`start-chat btn ${chat.you ? '' : 'disabled'}`}
-      disabled={!chat.you}
-      onClick={startChatBtnClicked}
-    >
-      Start Chat
-    </button>
+    <>
+      <button
+        className={`start-chat btn ${chat.you ? '' : 'disabled'}`}
+        disabled={!chat.you}
+        onClick={startChatBtnClicked}
+      >
+        Start Chat
+      </button>
+
+      {!isInternet && (
+        <p className='no-internet'>
+          Could not connect. Please check your internet connection and try reloading this page.
+        </p>
+      )}
+    </>
   )
 }
 

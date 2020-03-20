@@ -7,7 +7,6 @@ import StartChatButton from './StartChatButton'
 import WaitingForPeerMessage from './WaitingForPeerMessage'
 
 const ChatroomPage = ({ socket, randomTip }) => {
-  const [isInternet, setIsInternet] = useState(true)
   const [waitingForPeer, setWaitingForPeer] = useState(false)
   const [chatInSession, setChatInSession] = useState(false)
   const [chat, setChat] = useState({ you: '', peer: '', conversation: [] })
@@ -50,15 +49,7 @@ const ChatroomPage = ({ socket, randomTip }) => {
           </>
         )}
         {!waitingForPeer && !chatInSession && (
-          <StartChatButton
-            chat={chat}
-            setIsInternet={setIsInternet}
-            setWaitingForPeer={setWaitingForPeer}
-            socket={socket}
-          />
-        )}
-        {!isInternet && (
-          <p className='no-internet'>Could not connect. Please check your internet connection and try again.</p>
+          <StartChatButton chat={chat} setWaitingForPeer={setWaitingForPeer} socket={socket} />
         )}
         {waitingForPeer && <WaitingForPeerMessage cancelSearch={cancelSearch} />}
       </section>
