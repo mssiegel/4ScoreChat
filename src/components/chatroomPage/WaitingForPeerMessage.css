@@ -9,7 +9,7 @@
 
 @keyframes blinker {
   50% {
-    opacity: .2;
+    opacity: 0.2;
   }
 }
 

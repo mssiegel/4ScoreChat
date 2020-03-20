@@ -17,10 +17,9 @@
   padding-top: 67px;
 }
 
-
 /* navbar styles from navbar how-to css video at: https://youtu.be/8QKOaTYvYUA */
 :root {
-  --background: linear-gradient(177deg, #00BFF5, #87002A);
+  --background: linear-gradient(177deg, #00bff5, #87002a);
 }
 
 .nav-container {
@@ -67,11 +66,9 @@
   position: relative;
   transition: all ease-in-out 250ms;
 }
-.nav-toggle-label span::before{
+.nav-toggle-label span::before {
   height: 3px;
 }
-
-
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
@@ -91,7 +88,7 @@ nav {
   position: absolute;
   text-align: left;
   top: 100%;
-  background: linear-gradient(128deg, #00BFF5, #87002A);
+  background: linear-gradient(128deg, #00bff5, #87002a);
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
@@ -111,9 +108,9 @@ nav li {
 }
 
 nav a {
-   font-size: 1.2rem;
-   opacity: 0;
-   transition: opacity 150ms ease-in-out;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
 
 .nav-container a {
@@ -126,7 +123,7 @@ nav a {
 }
 
 .nav-toggle:checked ~ nav {
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span {
@@ -193,4 +190,3 @@ nav a {
     position: relative;
   }
 }
-

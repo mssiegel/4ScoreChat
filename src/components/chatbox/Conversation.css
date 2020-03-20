@@ -20,13 +20,13 @@
 .peer {
   font-weight: bold;
   color: red;
-  letter-spacing: .25px;
+  letter-spacing: 0.25px;
 }
 
 .you {
   font-weight: bold;
-  color: #0070FF;
-  letter-spacing: .25px;
+  color: #0070ff;
+  letter-spacing: 0.25px;
 }
 
 .chat-text {

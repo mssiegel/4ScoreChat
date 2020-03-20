@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import './ExampleImprovsPage.css'
 import Chatbox from './chatbox/Chatbox'
 
@@ -6,7 +6,7 @@ const firstExample = {
   title: "The Hypnotist's Watch",
   you: 'Hypnotist master',
   peer: 'Mighty lawyer',
-  conversation : [
+  conversation: [
     ['peer', 'Mighty lawyer', 'nice watch you got'],
     ['you', 'Hypnotist master', 'thanks. its pure gold'],
     ['you', 'Hypnotist master', 'a gift from a client'],
@@ -61,56 +61,54 @@ const secondExample = {
   title: "The Swordfighter's Secret",
   you: 'News reporter',
   peer: 'Partying swordsman',
-  conversation : [
-    ['you', 'News reporter', "welcome to the newsroom"],
-    ['peer', 'Partying swordsman', "Gee whiz. So many cameras"],
+  conversation: [
+    ['you', 'News reporter', 'welcome to the newsroom'],
+    ['peer', 'Partying swordsman', 'Gee whiz. So many cameras'],
     ['you', 'News reporter', "That's right! this is channel 5"],
-    ['you', 'News reporter', "thanks for coming to be interviewed"],
+    ['you', 'News reporter', 'thanks for coming to be interviewed'],
     ['peer', 'Partying swordsman', "You're welcome"],
     ['peer', 'Partying swordsman', "ask me whatever you'd like"],
-    ['you', 'News reporter', "all rightw"],
-    ['you', 'News reporter', "how do you balance partying with your swordfighting lessons"],
-    ['peer', 'Partying swordsman', "good question."],
-    ['peer', 'Partying swordsman', "I do them both at same time"],
-    ['you', 'News reporter', "how?"],
-    ['peer', 'Partying swordsman', "I blast music"],
-    ['peer', 'Partying swordsman', "and dance"],
-    ['peer', 'Partying swordsman', "while holding and waving my swords"],
-    ['you', 'News reporter', "amazing! tell me more"],
-    ['peer', 'Partying swordsman', "I also sing"],
-    ['peer', 'Partying swordsman', "at the top of my lungs"],
-    ['peer', 'Partying swordsman', "and i swordfight to the rhythm"],
-    ['peer', 'Partying swordsman', "of my voice"],
-    ['you', 'News reporter', "your voice?"],
-    ['peer', 'Partying swordsman', "yes. I sing a tune"],
-    ['peer', 'Partying swordsman', "and swordfight to the song i sing"],
-    ['you', 'News reporter', "can you give an example"],
-    ['peer', 'Partying swordsman', "sure thing"],
+    ['you', 'News reporter', 'all rightw'],
+    ['you', 'News reporter', 'how do you balance partying with your swordfighting lessons'],
+    ['peer', 'Partying swordsman', 'good question.'],
+    ['peer', 'Partying swordsman', 'I do them both at same time'],
+    ['you', 'News reporter', 'how?'],
+    ['peer', 'Partying swordsman', 'I blast music'],
+    ['peer', 'Partying swordsman', 'and dance'],
+    ['peer', 'Partying swordsman', 'while holding and waving my swords'],
+    ['you', 'News reporter', 'amazing! tell me more'],
+    ['peer', 'Partying swordsman', 'I also sing'],
+    ['peer', 'Partying swordsman', 'at the top of my lungs'],
+    ['peer', 'Partying swordsman', 'and i swordfight to the rhythm'],
+    ['peer', 'Partying swordsman', 'of my voice'],
+    ['you', 'News reporter', 'your voice?'],
+    ['peer', 'Partying swordsman', 'yes. I sing a tune'],
+    ['peer', 'Partying swordsman', 'and swordfight to the song i sing'],
+    ['you', 'News reporter', 'can you give an example'],
+    ['peer', 'Partying swordsman', 'sure thing'],
     ['peer', 'Partying swordsman', 'i might sing, "lalalala its timeeee to attack"'],
     ['peer', 'Partying swordsman', "and then I'll thrust my sword forward"],
-    ['you', 'News reporter', "incredible"],
-    ['peer', 'Partying swordsman', "exactly. i fight with beauty"],
-    ['peer', 'Partying swordsman', "thats my secret"],
-    ['you', 'News reporter', "Wow. That wraps up our interview"],
-    ['you', 'News reporter', "Thanks for sharing your singing swordfighting techniques"]
+    ['you', 'News reporter', 'incredible'],
+    ['peer', 'Partying swordsman', 'exactly. i fight with beauty'],
+    ['peer', 'Partying swordsman', 'thats my secret'],
+    ['you', 'News reporter', 'Wow. That wraps up our interview'],
+    ['you', 'News reporter', 'Thanks for sharing your singing swordfighting techniques']
   ]
 }
 
-
 const ExampleImprovsPage = () => {
-
   return (
     <>
-    <section className="examples-page-wrapper">
-      <h1 className='page-title examples-padding-bottom'>Example Improvs</h1>
+      <section className='examples-page-wrapper'>
+        <h1 className='page-title examples-padding-bottom'>Example Improvs</h1>
 
-      <div className="center-chatbox examples-padding-bottom">
-        <Chatbox chat={firstExample} noBottom={true} />
-      </div>
-      <div className="center-chatbox examples-padding-bottom">
-        <Chatbox chat={secondExample} noBottom={true} />
-      </div>
-    </section>
+        <div className='center-chatbox examples-padding-bottom'>
+          <Chatbox chat={firstExample} noBottom={true} />
+        </div>
+        <div className='center-chatbox examples-padding-bottom'>
+          <Chatbox chat={secondExample} noBottom={true} />
+        </div>
+      </section>
     </>
   )
 }

@@ -1,7 +1,7 @@
 /* CSS common to both About Page and Improv Tips Page */
 
 .page-wrapper {
-  background: #F6F6FA;
+  background: #f6f6fa;
   max-width: 94%;
   margin: auto;
   padding-bottom: 25px;
@@ -19,5 +19,4 @@
     padding-left: 15px;
     padding-right: 15px;
   }
-
 }
