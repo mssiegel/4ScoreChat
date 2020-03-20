@@ -81,6 +81,10 @@
     grid-template-columns: minmax(10px, 5%) 1fr 20px 1fr minmax(10px, 5%);
     justify-items: center;
   }
+
+  .vertical-align {
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 979px) {

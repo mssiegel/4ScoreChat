@@ -11,13 +11,13 @@ const firstChat = {
   you: 'Toy store owner',
   peer: 'Vampire hunter',
   conversation: [
-    ['peer', 'Vampire hunter', 'nice dagger you got'],
+    ['peer', 'Vampire hunter', 'these swords you sell are quite good'],
     ['you', 'Toy store owner', 'thanks.'],
-    ['you', 'Toy store owner', "it's made of strong plastic."],
-    ['peer', 'Vampire hunter', 'hmmm'],
-    ['peer', 'Vampire hunter', 'I challenge you to a duel'],
-    ['you', 'Toy store owner', 'bring it on bub'],
-    ['peer', 'Vampire hunter', 'with pleasure']
+    ['you', 'Toy store owner', 'they are perfect for ages 3 and up.'],
+    ['peer', 'Vampire hunter', 'hmmm, i fit that age range'],
+    ['peer', 'Vampire hunter', 'ring me up for one of them'],
+    ['you', 'Toy store owner', 'sure thing bub'],
+    ['peer', 'Vampire hunter', 'one can never have enough plastic swords']
   ]
 }
 
@@ -40,7 +40,7 @@ const secondChat = {
 const HomePage = () => {
   return (
     <>
-      <section id='first-page' className='grid'>
+      <section id='first-page' className='grid vertical-align'>
         <div></div>
         <div className='intro'>
           <h1 id='intro-title'>Instant Improv</h1>
@@ -56,9 +56,7 @@ const HomePage = () => {
           </p>
         </div>
         <div></div>
-        <div style={{ alignSelf: 'center' }}>
-          <Chatbox chat={firstChat} />
-        </div>
+        <Chatbox chat={firstChat} />
         <div></div>
       </section>
 
