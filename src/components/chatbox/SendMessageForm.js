@@ -3,18 +3,30 @@ import Fab from '@material-ui/core/Fab'
 import SendIcon from '@material-ui/icons/Send'
 import './SendMessageForm.css'
 
-const SendMessageForm = ({ chat, socket, scrollToBottomOfChat, setChat, messageInput }) => {
+const SendMessageForm = ({
+  chat,
+  socket,
+  scrollToBottomOfChat,
+  setChat,
+  realChat,
+  setRealChat,
+  improvMode,
+  messageInput
+}) => {
   const [message, setMessage] = useState('')
 
   function sendMessage(e) {
     e.preventDefault()
     if (chat.you && message) {
-      setChat({ ...chat, conversation: [...chat.conversation, ['you', chat.you, message]] })
+      improvMode
+        ? setChat({ ...chat, conversation: [...chat.conversation, ['you', chat.you, message]] })
+        : setRealChat([...realChat, ['you', 'Real You', message]])
       setMessage('')
       if (socket) {
         socket.emit('chat message', {
           userName: chat.you,
-          message
+          message,
+          improvMode
         })
         scrollToBottomOfChat()
       }
@@ -24,18 +36,21 @@ const SendMessageForm = ({ chat, socket, scrollToBottomOfChat, setChat, messageI
 
   function userTyping(e) {
     setMessage(e.target.value)
-    if (socket) socket.emit('typing', chat.you)
+    if (socket) socket.emit('typing', improvMode ? chat.you : 'Your Peer')
   }
 
   return (
-    <form onSubmit={sendMessage}>
+    <form onSubmit={sendMessage} className='send-message-form'>
+      {/* DECIDING WHETHER TO REMOVE USERNAME INPUT
       <input
         className='username'
         value={chat.you}
         placeholder='Your Character'
         maxLength='30'
         onChange={e => setChat({ ...chat, you: e.target.value })}
-      />
+      />*/}
+
+      <p className='current-user'>{improvMode ? chat.you : 'Real You'}</p>
       <input
         className='message'
         value={message}
@@ -44,7 +59,12 @@ const SendMessageForm = ({ chat, socket, scrollToBottomOfChat, setChat, messageI
         onChange={userTyping}
         ref={messageInput}
       />
-      <Fab size='small' type='submit' color='secondary' style={{ marginLeft: '10px', background: '#940000' }}>
+      <Fab
+        size='small'
+        type='submit'
+        color='secondary'
+        style={{ marginLeft: '10px', background: improvMode ? '#940000' : '#0070FF' }}
+      >
         <SendIcon />
       </Fab>
     </form>

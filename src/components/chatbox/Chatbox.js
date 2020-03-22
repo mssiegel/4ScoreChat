@@ -7,12 +7,15 @@ import SendMessageForm from './SendMessageForm'
 
 let eraseTypingMessage
 
-const Chatbox = ({ chat, setChat, setChatInSession, socket }) => {
+const Chatbox = ({ chat, setChat, setChatInSession, realChat, setRealChat, socket }) => {
+  const [unread, setUnread] = useState(0)
+  const [improvMode, setImprovMode] = useState(true)
   const [chatEnded, setChatEnded] = useState(false)
   const [chatEnder, setChatEnder] = useState()
   const [peerTyping, setPeerTyping] = useState(false)
 
   const messageInput = useRef(null)
+  const backgroundColor = { background: improvMode ? '#f8e5e0' : '#E0F8FF' }
 
   useEffect(() => {
     if (socket) {
@@ -24,7 +27,10 @@ const Chatbox = ({ chat, setChat, setChatInSession, socket }) => {
       socket.on('chat message', msg => {
         setPeerTyping(false)
         clearTimeout(eraseTypingMessage)
-        setChat(chat => ({ ...chat, conversation: [...chat.conversation, ['peer', msg.userName, msg.message]] }))
+        if (improvMode !== msg.improvMode) setUnread(unread => unread + 1)
+        msg.improvMode
+          ? setChat(chat => ({ ...chat, conversation: [...chat.conversation, ['peer', msg.userName, msg.message]] }))
+          : setRealChat(realChat => [...realChat, ['peer', 'Your Peer', msg.message]])
         scrollToBottomOfChat()
       })
 
@@ -36,7 +42,7 @@ const Chatbox = ({ chat, setChat, setChatInSession, socket }) => {
       })
     }
 
-    if (!chatEnded) messageInput.current.focus()
+    messageInput.current.focus()
 
     return () => {
       if (socket) {
@@ -45,7 +51,7 @@ const Chatbox = ({ chat, setChat, setChatInSession, socket }) => {
         socket.off('typing')
       }
     }
-  }, [])
+  }, [improvMode])
 
   function endChat() {
     if (socket) socket.emit('end chat')
@@ -59,27 +65,42 @@ const Chatbox = ({ chat, setChat, setChatInSession, socket }) => {
 
   function eraseChat() {
     setChat({ ...chat, conversation: [] })
+    setRealChat([])
     setChatInSession(false)
   }
 
   return (
     <>
       <div className='sample-chat-container'>
-        <div className='chatbox'>
-          {!chatEnded && <StickyButtons endChat={endChat} />}
-          <Conversation chat={chat} chatEnded={chatEnded} />
+        <div className='chatbox' style={backgroundColor}>
+          {!chatEnded && (
+            <StickyButtons
+              endChat={endChat}
+              improvMode={improvMode}
+              setImprovMode={setImprovMode}
+              scrollToBottomOfChat={scrollToBottomOfChat}
+              unread={unread}
+              setUnread={setUnread}
+            />
+          )}
+          <Conversation chat={chat} realChat={realChat} improvMode={improvMode} chatEnded={chatEnded} />
         </div>
 
-        <div className='chatbox-bottom'>
+        <div className='chatbox-bottom' style={backgroundColor}>
           {chatEnded ? (
             <ChatEndedMessage chatEnder={chatEnder} eraseChat={eraseChat} />
           ) : (
             <>
-              <p className='peer-typing-notification'>{peerTyping && `${peerTyping} is typing...`}</p>
+              <p className='peer-typing-notification' style={backgroundColor}>
+                {peerTyping && `${peerTyping} is typing...`}
+              </p>
               <SendMessageForm
                 chat={chat}
                 socket={socket}
                 setChat={setChat}
+                realChat={realChat}
+                setRealChat={setRealChat}
+                improvMode={improvMode}
                 scrollToBottomOfChat={scrollToBottomOfChat}
                 messageInput={messageInput}
               />

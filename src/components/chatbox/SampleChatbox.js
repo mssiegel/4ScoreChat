@@ -16,7 +16,7 @@ const SampleChatbox = ({ chat }) => {
       <div className='sample-chat-container'>
         <h2 style={subtitleStyle}>{chat.title}</h2>
         <div className='chatbox'>
-          <Conversation chat={chat} />
+          <Conversation chat={chat} improvMode={true} sampleOnly={true} />
         </div>
       </div>
     </>
