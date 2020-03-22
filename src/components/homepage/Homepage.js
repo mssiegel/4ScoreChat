@@ -49,7 +49,7 @@ const HomePage = () => {
             <img className='visit-chatroom-image' src={heroBoy} alt='Picture of costumed boy hero' />
           </div>
           <Link to='/chatroom/'>
-            <button className='visit-chatroom-button btn'>Visit Chatroom</button>
+            <button className='visit-chatroom-button btn'>Pick your character</button>
           </Link>
           <p id='homepage-tip'>
             Most popular time is <span className='homepage-tip-best-time'>Sunday 8:00pm EST</span>
@@ -74,7 +74,7 @@ const HomePage = () => {
       <div id='home-footer'>
         <h2 className='call-to-action'>Who will you be?</h2>
         <Link to='/chatroom/'>
-          <button className='visit-chatroom-button btn'>Visit Chatroom</button>
+          <button className='visit-chatroom-button btn'>Pick your character</button>
         </Link>
       </div>
     </>
