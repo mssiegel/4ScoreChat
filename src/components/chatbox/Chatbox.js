@@ -42,7 +42,8 @@ const Chatbox = ({ chat, setChat, setChatInSession, realChat, setRealChat, socke
       })
     }
 
-    messageInput.current.focus()
+    //If chat is on, then message input exists and focus on it
+    if (!chatEnded) messageInput.current.focus()
 
     return () => {
       if (socket) {
@@ -73,16 +74,15 @@ const Chatbox = ({ chat, setChat, setChatInSession, realChat, setRealChat, socke
     <>
       <div className='sample-chat-container'>
         <div className='chatbox' style={backgroundColor}>
-          {!chatEnded && (
-            <StickyButtons
-              endChat={endChat}
-              improvMode={improvMode}
-              setImprovMode={setImprovMode}
-              scrollToBottomOfChat={scrollToBottomOfChat}
-              unread={unread}
-              setUnread={setUnread}
-            />
-          )}
+          <StickyButtons
+            endChat={endChat}
+            chatEnded={chatEnded}
+            improvMode={improvMode}
+            setImprovMode={setImprovMode}
+            scrollToBottomOfChat={scrollToBottomOfChat}
+            unread={unread}
+            setUnread={setUnread}
+          />
           <Conversation chat={chat} realChat={realChat} improvMode={improvMode} chatEnded={chatEnded} />
         </div>
 
