@@ -75,7 +75,7 @@ const EmailSignup = () => {
               <input
                 type='submit'
                 style={submitButton}
-                defaultValue='Subscribe'
+                defaultValue='Submit'
                 name='subscribe'
                 id='mc-embedded-subscribe'
                 className='button'
