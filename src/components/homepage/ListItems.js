@@ -1,23 +1,23 @@
 import React from 'react'
 import './ListItems.css'
-import PaletteIcon from '@material-ui/icons/Palette'
-import SecurityIcon from '@material-ui/icons/Security'
-import ChildCareIcon from '@material-ui/icons/ChildCare'
+import WhatshotIcon from '@material-ui/icons/Whatshot'
+import FilterVintageIcon from '@material-ui/icons/FilterVintage'
+import FavoriteIcon from '@material-ui/icons/Favorite'
 
 const ListItems = () => {
   return (
-    <>
+    <div className='list-item-container'>
       <div className='list-item'>
         <div className='flex'>
-          <PaletteIcon />
-          <h3 className='list-subtitle'>Creativity</h3>
+          <WhatshotIcon />
+          <h3 className='list-subtitle'>Meet cool people</h3>
         </div>
-        <p className='list-text'>Open your heart. Get in character. And have fun chatting!</p>
+        <p className='list-text'>Get matched with a random person from around the world.</p>
       </div>
 
       <div className='list-item'>
         <div className='flex'>
-          <ChildCareIcon />
+          <FilterVintageIcon />
           <h3 className='list-subtitle'>Family Friendly</h3>
         </div>
         <p className='list-text'>
@@ -25,14 +25,14 @@ const ListItems = () => {
         </p>
       </div>
 
-      <div className='final-list-item'>
+      <div className='list-item final-list-item'>
         <div className='flex'>
-          <SecurityIcon />
-          <h3 className='list-subtitle'>Anonymous</h3>
+          <FavoriteIcon />
+          <h3 className='list-subtitle'>Connect emotionally</h3>
         </div>
-        <p className='list-text'>All chats are anonymous. Be as silly as you'd like. No one will judge you.</p>
+        <p className='list-text'>Be as open as you'd like. Talk as your character or as your real self.</p>
       </div>
-    </>
+    </div>
   )
 }
 

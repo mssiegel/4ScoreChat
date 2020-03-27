@@ -56,11 +56,7 @@
 
 #second-page {
   background: #f6f6fa;
-  padding-top: 50px;
-}
-
-.list-items-container {
-  align-self: center;
+  padding-top: 30px;
 }
 
 #home-footer {
@@ -94,10 +90,6 @@
   }
 
   .intro {
-    margin-bottom: 70px;
-  }
-
-  .list-items-container {
     margin-bottom: 50px;
   }
 

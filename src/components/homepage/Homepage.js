@@ -7,24 +7,32 @@ import ListItems from './ListItems'
 import EmailSignup from './EmailSignup'
 
 const firstChat = {
-  title: 'Be Anyone',
+  title: 'Enter as anyone',
+  titleColor: 'black',
   you: 'Toy store owner',
   peer: 'Vampire hunter',
   conversation: [
-    ['peer', 'Vampire hunter', 'these swords you sell are quite good'],
+    ['peer', 'Vampire hunter', 'these swords u sell are quite good'],
     ['you', 'Toy store owner', 'thanks.'],
     ['you', 'Toy store owner', 'they are perfect for ages 3 and up.'],
     ['peer', 'Vampire hunter', 'hmmm, i fit that age range'],
-    ['peer', 'Vampire hunter', 'ring me up for one of them'],
-    ['you', 'Toy store owner', 'sure thing bub'],
-    ['peer', 'Vampire hunter', 'one can never have enough plastic swords']
+    ['peer', 'Vampire hunter', 'i am gonna get one']
   ]
 }
 
+const realChat = [
+  ['you', 'Real You', 'Hi. How are u doing?'],
+  ['peer', 'Your Peer', 'So busy lol.'],
+  ['peer', 'Your Peer', 'It has been a wild day for me'],
+  ['you', 'Real You', 'Oh. how come'],
+  ['peer', 'Your Peer', 'I had a calculus test in school'],
+  ['peer', 'Your Peer', 'it was super hard']
+]
+
 const secondChat = {
-  title: 'Be Present',
-  titleColor: 'black',
-  you: 'Pizza delivery boy',
+  title: 'Switch to your real self anytime',
+  titleColor: 'black'
+  /*you: 'Pizza delivery boy',
   peer: 'Guitar rockstar',
   conversation: [
     ['you', 'Pizza delivery boy', 'hello Guitar rockstar'],
@@ -34,10 +42,18 @@ const secondChat = {
     ['peer', 'Guitar rockstar', 'Gee thanks!'],
     ['peer', 'Guitar rockstar', 'Oh pizza you taste so gooooood'],
     ['you', 'Pizza delivery boy', "Oh pizza you're my favorite fooooood"]
-  ]
+  ]*/
 }
 
 const HomePage = () => {
+  const subtitleStyle = {
+    textAlign: 'center',
+    color: 'black',
+    fontWeight: 'normal',
+    marginBottom: '12px',
+    letterSpacing: '0.5px'
+  }
+
   return (
     <>
       <section id='first-page' className='grid vertical-align'>
@@ -56,7 +72,7 @@ const HomePage = () => {
           </p>
         </div>
         <div></div>
-        <SampleChatbox chat={firstChat} />
+        <ListItems />
         <div></div>
       </section>
 
@@ -64,11 +80,9 @@ const HomePage = () => {
 
       <section id='second-page' className='grid'>
         <div></div>
-        <div className='list-items-container'>
-          <ListItems />
-        </div>
+        <SampleChatbox chat={firstChat} />
         <div></div>
-        <SampleChatbox chat={secondChat} />
+        <SampleChatbox chat={secondChat} improvMode={false} realChat={realChat} />
         <div></div>
       </section>
       <div id='home-footer'>
