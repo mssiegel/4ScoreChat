@@ -12,9 +12,9 @@ const firstChat = {
   you: 'Toy store owner',
   peer: 'Vampire hunter',
   conversation: [
-    ['peer', 'Vampire hunter', 'these swords u sell are quite good'],
+    ['peer', 'Vampire hunter', 'i like these toy swords u sell'],
     ['you', 'Toy store owner', 'thanks.'],
-    ['you', 'Toy store owner', 'they are perfect for ages 3 and up.'],
+    ['you', 'Toy store owner', 'they are for ages 3 and up.'],
     ['peer', 'Vampire hunter', 'hmmm, i fit that age range'],
     ['peer', 'Vampire hunter', 'i am gonna get one']
   ]
@@ -25,7 +25,7 @@ const realChat = [
   ['peer', 'Your Peer', 'So busy lol.'],
   ['peer', 'Your Peer', 'It has been a wild day for me'],
   ['you', 'Real You', 'Oh. how come'],
-  ['peer', 'Your Peer', 'I had a calculus test in school'],
+  ['peer', 'Your Peer', 'I had an algebra test in school'],
   ['peer', 'Your Peer', 'it was super hard']
 ]
 
@@ -60,7 +60,7 @@ const HomePage = () => {
         <div></div>
         <div className='intro'>
           <h1 id='intro-title'>Instant Improv</h1>
-          <h2 id='intro-subtitle'>Connect and chat away</h2>
+          <h2 id='intro-subtitle'>Make new friends {'&'} chat away</h2>
           <div>
             <img className='visit-chatroom-image' src={heroBoy} alt='Picture of costumed boy hero' />
           </div>
