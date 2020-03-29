@@ -12,16 +12,16 @@ const AboutPage = () => {
       <section className='page-wrapper'>
         <h1 className='page-title'>About</h1>
         <div className='common-center'>
-          <p>
+          {/*<p>
             4ScoreChat was started by a man from New York who is a fan of getting out of his comfort zone. He took
             improv classes at New York's Magnet Theater and also did public speaking at the New York Toastmasters Club.
             However, when life got busy, he wanted a way to improv and storytell from the comfort of his home. And so
             4ScoreChat was born.
-          </p>
+          </p>*/}
 
           <p>
-            Our mission is to build a community that fosters imagination, self-improvement, and spontaneous improv.
-            Though we don't enforce it, we request all chats on our site stay somewhat clean and family-friendly.
+            Our mission is to build a community that fosters imagination, friendships, and a love for improv. Though we
+            don't enforce it, we request all chats on our site stay somewhat clean and family-friendly.
           </p>
 
           <p>
