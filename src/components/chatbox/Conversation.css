@@ -33,10 +33,10 @@
   font-weight: bold;
 }
 
-.chat-text {
-  color: #696969;
-}
-
 .empty-space {
   padding: 5px;
+}
+
+.chat-text {
+  color: #696969;
 }

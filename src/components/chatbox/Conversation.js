@@ -2,19 +2,28 @@ import React from 'react'
 import './Conversation.css'
 
 const Conversation = ({ chat, realChat, improvMode, sampleOnly }) => {
-  const { you, peer } = chat
-  const conversation = improvMode ? chat.conversation : realChat
+  let you, peer, conversation
+  if (improvMode) {
+    you = chat.you
+    peer = chat.peer
+    conversation = chat.conversation
+  } else {
+    you = 'Real You'
+    peer = 'Your Peer'
+    conversation = realChat
+  }
+
   return (
     <div className={'chatbox-text-wrapper'}>
       <div className='peer-announcement'>
         <p className='grey'>
-          Hi <span className='you'>{improvMode ? you : 'Real You'}</span>.
+          Hi <span className='you'>{you}</span>.
         </p>
         <p className='grey'>{chat.startTime}</p>
       </div>
 
       <p className='grey'>
-        You matched with <span className='peer'>{improvMode ? peer : 'Your Peer'}</span>.
+        You matched with <span className='peer'>{peer}</span>.
       </p>
 
       {!sampleOnly && (

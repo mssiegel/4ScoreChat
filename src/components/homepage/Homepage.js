@@ -32,17 +32,6 @@ const realChat = [
 const secondChat = {
   title: 'Switch to your real self anytime',
   titleColor: 'black'
-  /*you: 'Pizza delivery boy',
-  peer: 'Guitar rockstar',
-  conversation: [
-    ['you', 'Pizza delivery boy', 'hello Guitar rockstar'],
-    ['you', 'Pizza delivery boy', 'Can you sing me a song?'],
-    ['peer', 'Guitar rockstar', "I'll sing for a smoking hot pizza"],
-    ['you', 'Pizza delivery boy', "Okay, here's your pizza."],
-    ['peer', 'Guitar rockstar', 'Gee thanks!'],
-    ['peer', 'Guitar rockstar', 'Oh pizza you taste so gooooood'],
-    ['you', 'Pizza delivery boy', "Oh pizza you're my favorite fooooood"]
-  ]*/
 }
 
 const HomePage = () => {
