@@ -42,7 +42,7 @@ const Chatbox = ({ chat, setChat, setChatInSession, realChat, setRealChat, socke
       })
     }
 
-    //If chat is on, then message input exists and focus on it
+    //If chat is on, then message input exists and focus on it whether starting chat or switching to/from improvMode
     if (!chatEnded) messageInput.current.focus()
 
     return () => {
@@ -79,7 +79,6 @@ const Chatbox = ({ chat, setChat, setChatInSession, realChat, setRealChat, socke
             chatEnded={chatEnded}
             improvMode={improvMode}
             setImprovMode={setImprovMode}
-            scrollToBottomOfChat={scrollToBottomOfChat}
             unread={unread}
             setUnread={setUnread}
           />

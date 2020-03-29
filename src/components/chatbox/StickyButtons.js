@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
 import './StickyButtons.css'
 
-const StickyButtons = ({ endChat, chatEnded, improvMode, setImprovMode, scrollToBottomOfChat, unread, setUnread }) => {
-  useEffect(() => scrollToBottomOfChat())
-
+const StickyButtons = ({ endChat, chatEnded, improvMode, setImprovMode, unread, setUnread }) => {
   function switchModes() {
     setImprovMode(!improvMode)
     setUnread(0)
