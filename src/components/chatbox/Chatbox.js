@@ -83,7 +83,7 @@ const Chatbox = ({ chat, setChat, setChatInSession, realChat, setRealChat, socke
             unread={unread}
             setUnread={setUnread}
           />
-          <Conversation chat={chat} realChat={realChat} improvMode={improvMode} chatEnded={chatEnded} />
+          <Conversation chat={chat} realChat={realChat} improvMode={improvMode} />
         </div>
 
         <div className='chatbox-bottom' style={backgroundColor}>

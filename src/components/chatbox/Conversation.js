@@ -1,11 +1,11 @@
 import React from 'react'
 import './Conversation.css'
 
-const Conversation = ({ chat, realChat, chatEnded, improvMode, sampleOnly }) => {
+const Conversation = ({ chat, realChat, improvMode, sampleOnly }) => {
   const { you, peer } = chat
   const conversation = improvMode ? chat.conversation : realChat
   return (
-    <div className={`chatbox-text-wrapper ${chatEnded ? 'low-opacity' : ''}`}>
+    <div className={'chatbox-text-wrapper'}>
       <div className='peer-announcement'>
         <p className='grey'>
           Hi <span className='you'>{improvMode ? you : 'Real You'}</span>.
