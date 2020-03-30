@@ -1,4 +1,4 @@
-/* DECIDING WHETHER TO REMOVE USERNAME INPUT
+/* DECIDING WHETHER TO REMOVE USERNAME INPUT*/
 .username {
   text-align: center;
   border-radius: 20px;
@@ -8,13 +8,13 @@
   font-weight: bold;
   color: #0070ff;
   font-size: 17px;
-  width: 230px;
+  width: 200px;
 }
 
 .username:focus {
   outline: none;
   border: 2px solid deepskyblue;
-}*/
+}
 
 .send-message-form {
   margin-bottom: 1px;

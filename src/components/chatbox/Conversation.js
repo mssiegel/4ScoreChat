@@ -14,7 +14,7 @@ const Conversation = ({ chat, realChat, improvMode, sampleOnly }) => {
   }
 
   return (
-    <div className={'chatbox-text-wrapper'}>
+    <div className='chatbox-text-wrapper'>
       <div className='peer-announcement'>
         <p className='grey'>
           Hi <span className='you'>{you}</span>.

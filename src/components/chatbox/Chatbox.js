@@ -72,7 +72,7 @@ const Chatbox = ({ chat, setChat, setChatInSession, realChat, setRealChat, socke
 
   return (
     <>
-      <div className='sample-chat-container'>
+      <div className='chat-container'>
         <div className='chatbox' style={backgroundColor}>
           <StickyButtons
             endChat={endChat}
