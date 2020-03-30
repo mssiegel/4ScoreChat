@@ -18,16 +18,19 @@ const Header = () => (
         <nav>
           <ul>
             <li>
-              <Link to='/example-improvs/'>Example Improvs</Link>
+              <Link to='/chatroom/'>Chatroom</Link>
             </li>
             <li>
-              <Link to='/improv-tips/'>Improv Tips</Link>
+              <Link to='/single-player'>Single Player</Link>
+            </li>
+            <li>
+              <Link to='/example-improvs/'>Examples</Link>
+            </li>
+            <li>
+              <Link to='/improv-tips/'>Tips</Link>
             </li>
             <li>
               <Link to='/about/'>About</Link>
-            </li>
-            <li>
-              <Link to='/chatroom/'>Chatroom</Link>
             </li>
           </ul>
         </nav>
