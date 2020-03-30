@@ -17,10 +17,13 @@ const SinglePlayerPage = () => {
   const messageInput = useRef(null)
 
   useEffect(() => {
-    messageInput.current.focus()
     localStorage['saved chat'] = JSON.stringify(improvChat)
     setSavedChat(localStorage['saved chat'] && JSON.parse(localStorage['saved chat']))
   }, [improvChat])
+
+  useEffect(() => {
+    messageInput.current.focus()
+  }, [curPlayer])
 
   function sendMessage(e) {
     e.preventDefault()
