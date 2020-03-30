@@ -8,7 +8,7 @@ const SinglePlayerPage = () => {
     messageInput.current.focus()
     localStorage['saved chat'] = JSON.stringify(improvChat)
     setSavedChat(localStorage['saved chat'] && JSON.parse(localStorage['saved chat']))
-  })
+  }, [improvChat])
 
   const initialChat = [['peer', 'Intro', 'Create your own conversations. Press "Tab" to quickly switch characters']]
   const [savedChat, setSavedChat] = useState()
