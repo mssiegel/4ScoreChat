@@ -4,12 +4,6 @@ import SendIcon from '@material-ui/icons/Send'
 import './SinglePlayerPage.css'
 
 const SinglePlayerPage = () => {
-  useEffect(() => {
-    messageInput.current.focus()
-    localStorage['saved chat'] = JSON.stringify(improvChat)
-    setSavedChat(localStorage['saved chat'] && JSON.parse(localStorage['saved chat']))
-  }, [improvChat])
-
   const initialChat = [['peer', 'Intro', 'Create your own conversations. Press "Tab" to quickly switch characters']]
   const [savedChat, setSavedChat] = useState()
   const [improvChat, setImprovChat] = useState(savedChat || initialChat)
@@ -21,6 +15,12 @@ const SinglePlayerPage = () => {
   const backgroundColor = { background: '#f8e5e0' }
 
   const messageInput = useRef(null)
+
+  useEffect(() => {
+    messageInput.current.focus()
+    localStorage['saved chat'] = JSON.stringify(improvChat)
+    setSavedChat(localStorage['saved chat'] && JSON.parse(localStorage['saved chat']))
+  }, [improvChat])
 
   function sendMessage(e) {
     e.preventDefault()
