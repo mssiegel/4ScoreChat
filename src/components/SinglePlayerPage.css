@@ -38,7 +38,7 @@
 .non-active-player {
   cursor: pointer;
   color: #aaa;
-  border: 1px dashed #bbb;
+  background: #eee;
   padding-left: 4px;
   padding-right: 4px;
 }
