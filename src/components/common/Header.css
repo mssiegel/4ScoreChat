@@ -107,18 +107,21 @@ nav li {
   margin-left: 1em;
 }
 
-nav a {
+nav a,
+.dropdown {
   font-size: 1.2rem;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
 
-.nav-container a {
+.nav-container a,
+.dropdown {
   color: white;
   text-decoration: none;
 }
 
-.nav-container a:hover {
+.nav-container a:hover,
+.dropdown:hover {
   color: #ccc;
 }
 
@@ -138,7 +141,8 @@ nav a {
   transform: translateY(-7px) rotate(-90deg);
 }
 
-.nav-toggle:checked ~ nav a {
+.nav-toggle:checked ~ nav a,
+.nav-toggle:checked ~ nav .dropdown {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
@@ -150,7 +154,7 @@ nav a {
 
   .nav-container {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    grid-template-columns: 0.5fr auto minmax(600px, 3fr) 0.5fr;
   }
 
   .nav-title {
@@ -185,7 +189,8 @@ nav a {
     margin-bottom: 0;
   }
 
-  nav a {
+  nav a,
+  .dropdown {
     opacity: 1;
     position: relative;
   }

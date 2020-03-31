@@ -1,0 +1,18 @@
+.dropdown {
+  cursor: pointer;
+  display: flex;
+}
+
+.dropdown-content {
+  background: linear-gradient(128deg, #0097c2, #87002a);
+  margin-top: 5px;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}

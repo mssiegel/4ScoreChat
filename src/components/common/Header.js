@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../../images/wizard-hat.jpg'
 import './Header.css'
+import Dropdown from './Dropdown'
 
 const Header = () => (
   <>
@@ -24,13 +25,7 @@ const Header = () => (
               <Link to='/single-player'>Single Player</Link>
             </li>
             <li>
-              <Link to='/example-improvs/'>Examples</Link>
-            </li>
-            <li>
-              <Link to='/improv-tips/'>Tips</Link>
-            </li>
-            <li>
-              <Link to='/about/'>About</Link>
+              <Dropdown />
             </li>
           </ul>
         </nav>
