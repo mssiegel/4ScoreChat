@@ -101,7 +101,7 @@ const SinglePlayerPage = () => {
                     <>
                       <span
                         className={`${curPlayer === 1 ? 'player1' : 'non-active-player'}`}
-                        onClick={curPlayer === 1 ? '' : switchPlayers}
+                        onClick={curPlayer === 1 ? null : switchPlayers}
                       >
                         {player1}
                       </span>
@@ -110,7 +110,7 @@ const SinglePlayerPage = () => {
                       </span>
                       <span
                         className={`${curPlayer === 2 ? 'player2' : 'non-active-player'}`}
-                        onClick={curPlayer === 2 ? '' : switchPlayers}
+                        onClick={curPlayer === 2 ? null : switchPlayers}
                       >
                         {player2}
                       </span>
