@@ -5,7 +5,10 @@ import './SinglePlayerPage.css'
 
 const SinglePlayerPage = () => {
   const initialChat = [['peer', 'Intro', 'Create your own conversations. Press "Tab" to quickly switch characters']]
-  const [savedChat, setSavedChat] = useState()
+
+  let savedChat
+  if (typeof window !== 'undefined') savedChat = localStorage['saved chat'] && JSON.parse(localStorage['saved chat'])
+
   const [improvChat, setImprovChat] = useState(savedChat || initialChat)
   const [player1, setPlayer1] = useState('Person 1')
   const [player2, setPlayer2] = useState('Person 2')
@@ -18,7 +21,6 @@ const SinglePlayerPage = () => {
 
   useEffect(() => {
     localStorage['saved chat'] = JSON.stringify(improvChat)
-    setSavedChat(localStorage['saved chat'] && JSON.parse(localStorage['saved chat']))
   }, [improvChat])
 
   useEffect(() => {
