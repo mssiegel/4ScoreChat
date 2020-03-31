@@ -25,7 +25,7 @@ const SinglePlayerPage = () => {
 
   useEffect(() => {
     messageInput.current.focus()
-  }, [curPlayer])
+  })
 
   function sendMessage(e) {
     e.preventDefault()
