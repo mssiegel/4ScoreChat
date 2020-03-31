@@ -99,13 +99,19 @@ const SinglePlayerPage = () => {
                     </>
                   ) : (
                     <>
-                      <span className={`${curPlayer === 1 ? 'player1' : 'non-active-player'}`} onClick={switchPlayers}>
+                      <span
+                        className={`${curPlayer === 1 ? 'player1' : 'non-active-player'}`}
+                        onClick={curPlayer === 1 ? '' : switchPlayers}
+                      >
                         {player1}
                       </span>
                       <span className='edit-names' onClick={() => setEditingUsernames(true)}>
                         Edit
                       </span>
-                      <span className={`${curPlayer === 2 ? 'player2' : 'non-active-player'}`} onClick={switchPlayers}>
+                      <span
+                        className={`${curPlayer === 2 ? 'player2' : 'non-active-player'}`}
+                        onClick={curPlayer === 2 ? '' : switchPlayers}
+                      >
                         {player2}
                       </span>
                     </>
