@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
-import './dropdown.css'
+import './Dropdown.css'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown'
 
 const Dropdown = () => {
