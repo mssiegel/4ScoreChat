@@ -100,33 +100,35 @@ const SinglePlayerPage = () => {
                         onChange={(e) => setPlayer1(e.target.value)}
                       />
                       <input
-                        className='username player2'
+                        className='username red-font'
                         value={player2}
                         placeholder='Your Character'
                         maxLength='20'
                         onChange={(e) => setPlayer2(e.target.value)}
                       />
-                      <span className='edit-names' onClick={() => setEditingUsernames(false)}>
+                      <button className='edit-names' onClick={() => setEditingUsernames(false)} type='button'>
                         Done Editing
-                      </span>
+                      </button>
                     </>
                   ) : (
                     <>
-                      <span
+                      <button
                         className={`${curPlayer === 1 ? 'player1' : 'non-active-player'}`}
                         onClick={curPlayer === 1 ? null : switchPlayers}
+                        type='button'
                       >
                         {player1}
-                      </span>
-                      <span className='edit-names' onClick={() => setEditingUsernames(true)}>
+                      </button>
+                      <button className='edit-names' onClick={() => setEditingUsernames(true)} type='button'>
                         Edit
-                      </span>
-                      <span
+                      </button>
+                      <button
                         className={`${curPlayer === 2 ? 'player2' : 'non-active-player'}`}
                         onClick={curPlayer === 2 ? null : switchPlayers}
+                        type='button'
                       >
                         {player2}
-                      </span>
+                      </button>
                     </>
                   )}
                 </div>

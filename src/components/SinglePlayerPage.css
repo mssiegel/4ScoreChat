@@ -28,11 +28,19 @@
 .player1 {
   color: #0070ff;
   font-weight: bold;
+  background: none;
+  border: none;
 }
 
 .player2 {
   color: red;
   font-weight: bold;
+  background: none;
+  border: none;
+}
+
+.red-font {
+  color: red;
 }
 
 .non-active-player {
@@ -41,6 +49,7 @@
   background: #eee;
   padding-left: 4px;
   padding-right: 4px;
+  border: 1px dashed #bbb;
 }
 
 .message2:focus {
