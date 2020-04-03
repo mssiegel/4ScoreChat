@@ -6,12 +6,17 @@ import './SinglePlayerPage.css'
 const SinglePlayerPage = () => {
   const initialChat = [['peer', 'Intro', 'Create your own conversations. Press "Tab" to quickly switch characters']]
 
-  let savedChat
-  if (typeof window !== 'undefined') savedChat = localStorage['saved chat'] && JSON.parse(localStorage['saved chat'])
+  let savedChat, savedPlayer1, savedPlayer2
+  if (typeof window !== 'undefined') {
+    savedChat = localStorage['saved chat'] && JSON.parse(localStorage['saved chat'])
+    savedPlayer1 = localStorage['player1'] && JSON.parse(localStorage['player1'])
+    savedPlayer2 = localStorage['player2'] && JSON.parse(localStorage['player2'])
+  }
 
   const [improvChat, setImprovChat] = useState(savedChat || initialChat)
-  const [player1, setPlayer1] = useState('Person 1')
-  const [player2, setPlayer2] = useState('Person 2')
+  const [player1, setPlayer1] = useState(savedPlayer1 || 'Person 1')
+  const [player2, setPlayer2] = useState(savedPlayer2 || 'Person 2')
+
   const [curPlayer, setCurPlayer] = useState(1)
   const [editingUsernames, setEditingUsernames] = useState(false)
   const [message, setMessage] = useState('')
@@ -21,7 +26,9 @@ const SinglePlayerPage = () => {
 
   useEffect(() => {
     localStorage['saved chat'] = JSON.stringify(improvChat)
-  }, [improvChat])
+    localStorage['player1'] = JSON.stringify(player1)
+    localStorage['player2'] = JSON.stringify(player2)
+  }, [improvChat, player1, player2])
 
   useEffect(() => {
     messageInput.current.focus()
@@ -50,6 +57,12 @@ const SinglePlayerPage = () => {
     if (e.key === 'Tab') switchPlayers()
   }
 
+  function resetChat() {
+    setImprovChat(initialChat)
+    setPlayer1('Person 1')
+    setPlayer2('Person 2')
+  }
+
   return (
     <>
       <div>
@@ -57,7 +70,7 @@ const SinglePlayerPage = () => {
           Single Player
         </h1>
         <div className='reset-chat-container'>
-          <button className='btn reset-chat' onClick={() => setImprovChat(initialChat)}>
+          <button className='btn reset-chat' onClick={resetChat}>
             Reset chat
           </button>
         </div>
@@ -84,14 +97,14 @@ const SinglePlayerPage = () => {
                         value={player1}
                         placeholder='Your Character'
                         maxLength='20'
-                        onChange={e => setPlayer1(e.target.value)}
+                        onChange={(e) => setPlayer1(e.target.value)}
                       />
                       <input
                         className='username player2'
                         value={player2}
                         placeholder='Your Character'
                         maxLength='20'
-                        onChange={e => setPlayer2(e.target.value)}
+                        onChange={(e) => setPlayer2(e.target.value)}
                       />
                       <span className='edit-names' onClick={() => setEditingUsernames(false)}>
                         Done Editing
@@ -122,8 +135,8 @@ const SinglePlayerPage = () => {
                   value={message}
                   placeholder='Say something'
                   maxLength='75'
-                  onKeyDown={e => switchIfTabPressed(e)}
-                  onChange={e => setMessage(e.target.value)}
+                  onKeyDown={(e) => switchIfTabPressed(e)}
+                  onChange={(e) => setMessage(e.target.value)}
                   ref={messageInput}
                   disabled={editingUsernames}
                 />
