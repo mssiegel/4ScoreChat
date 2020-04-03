@@ -7,10 +7,7 @@ import SinglePlayerPage from '../components/SinglePlayerPage'
 
 const ImprovTips = () => (
   <Layout>
-    <SEO
-      title='Single Player'
-      description='Improve your improv. Read our tips and tricks on how to be an improv superstar.'
-    />
+    <SEO title='Single Player' description='Create your own conversations. Write your own chats.' />
     <SinglePlayerPage />
   </Layout>
 )

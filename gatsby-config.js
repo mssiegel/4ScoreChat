@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `4ScoreChat: Clean Instant Improv`,
-    description: `4ScoreChat lets you pick a character and instantly start chatting anonymously with a stranger. It's the perfect place to exercise your imagination in a family-friendly way.`,
+    title: `4ScoreChat`,
+    description: `4ScoreChat lets you pick a character and instantly start chatting with a stranger. It's the perfect place to exercise your imagination in a family-friendly way.`,
     author: `Moshe Siegel`,
-    siteUrl: 'https://www.4scorechat.com/'
+    siteUrl: 'https://www.4scorechat.com/',
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -12,8 +12,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -26,18 +26,18 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/wizard-hat.jpg` // This path is relative to the root of the site.
-      }
+        icon: `src/images/wizard-hat.jpg`, // This path is relative to the root of the site.
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-111378050-3',
-        head: true
-      }
-    }
+        head: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ]
+  ],
 }
