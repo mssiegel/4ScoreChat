@@ -4,7 +4,14 @@ import SendIcon from '@material-ui/icons/Send'
 import './SinglePlayerPage.css'
 
 const SinglePlayerPage = () => {
-  const initialChat = [['peer', 'Intro', 'Create your own conversations. Press "Tab" to quickly switch characters']]
+  const initialChat = [
+    [
+      'peer',
+      'Tips',
+      'Info is saved even if you reload the page. Press "Tab" to quickly switch people on a large keyboard.',
+    ],
+    ['peer', '', ''],
+  ]
 
   let savedChat, savedPlayer1, savedPlayer2
   if (typeof window !== 'undefined') {
