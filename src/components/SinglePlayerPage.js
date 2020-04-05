@@ -61,7 +61,11 @@ const SinglePlayerPage = () => {
   }
 
   function switchIfTabPressed(e) {
-    if (e.key === 'Tab') switchPlayers()
+    if (e.key === 'Tab') {
+      //preventDefault prevents safari quirk that focuses browser address bar upon pressing tab
+      e.preventDefault()
+      switchPlayers()
+    }
   }
 
   function resetChat() {
