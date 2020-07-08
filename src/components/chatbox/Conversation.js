@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Conversation.css'
 
 const Conversation = ({ chat, realChat, improvMode, sampleOnly }) => {
+  const [originalChar, setOriginalChar] = useState('')
+  useEffect(() => {
+    setOriginalChar(chat.you)
+  }, [])
+
   let you, peer, conversation
   if (improvMode) {
-    you = chat.you
+    you = originalChar
     peer = chat.peer
     conversation = chat.conversation
   } else {

@@ -11,7 +11,7 @@ const SendMessageForm = ({
   realChat,
   setRealChat,
   improvMode,
-  messageInput
+  messageInput,
 }) => {
   const [message, setMessage] = useState('')
 
@@ -26,7 +26,7 @@ const SendMessageForm = ({
         socket.emit('chat message', {
           userName: chat.you,
           message,
-          improvMode
+          improvMode,
         })
         scrollToBottomOfChat()
       }
@@ -41,16 +41,18 @@ const SendMessageForm = ({
 
   return (
     <form onSubmit={sendMessage} className='send-message-form'>
-      {/* DECIDING WHETHER TO REMOVE USERNAME INPUT
-      <input
-        className='username'
-        value={chat.you}
-        placeholder='Your Character'
-        maxLength='30'
-        onChange={e => setChat({ ...chat, you: e.target.value })}
-      />*/}
+      {improvMode ? (
+        <input
+          className='username'
+          value={chat.you}
+          placeholder='Your Character'
+          maxLength='30'
+          onChange={e => setChat({ ...chat, you: e.target.value })}
+        />
+      ) : (
+        <p className='current-user'>Real You</p>
+      )}
 
-      <p className='current-user'>{improvMode ? chat.you : 'Real You'}</p>
       <input
         className='message'
         value={message}
