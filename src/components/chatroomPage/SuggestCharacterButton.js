@@ -8,7 +8,7 @@ const SuggestCharacterButton = ({ waitingForPeer, setChat, chat }) => {
     let randomChar
     do {
       const characterList = [
-        'Wedding entertainer',
+        'Singer at weddings',
         'Whoopee cushion maker',
         'Elven archer',
         'Circus clown',
@@ -80,13 +80,19 @@ const SuggestCharacterButton = ({ waitingForPeer, setChat, chat }) => {
         'Tour guide',
         'Farmer',
         'World Traveler',
-        'Exotic Traveler',
+        '5-Tentacled martian',
         'Keeper of beasts',
         'Pet shop owner',
         'A robot',
         'Boat captain',
         'Travel agent',
-        'Chef'
+        'Chef',
+        'Captain Breakfast',
+        'Pancake flipping pirate',
+        'Clothing designer for ogres',
+        'Toy maker',
+        'Inventor of water guns',
+        'Expert in burping',
       ]
       const randomNum = Math.floor(Math.random() * characterList.length)
       randomChar = characterList[randomNum]
@@ -97,7 +103,7 @@ const SuggestCharacterButton = ({ waitingForPeer, setChat, chat }) => {
   const characterIcon = {
     color: 'white',
     verticalAlign: 'middle',
-    marginLeft: '5px'
+    marginLeft: '5px',
   }
 
   return (

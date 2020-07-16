@@ -9,15 +9,15 @@ import EmailSignup from './EmailSignup'
 const firstChat = {
   title: 'Enter as anyone',
   titleColor: 'black',
-  you: 'Toy store owner',
-  peer: 'Vampire hunter',
+  you: 'Farmer',
+  peer: 'Pancake flipping pirate',
   conversation: [
-    ['peer', 'Vampire hunter', 'i like these toy swords u sell'],
-    ['you', 'Toy store owner', 'thanks.'],
-    ['you', 'Toy store owner', 'they are for ages 3 and up.'],
-    ['peer', 'Vampire hunter', 'hmmm, i fit that age range'],
-    ['peer', 'Vampire hunter', 'i am gonna get one']
-  ]
+    ['you', 'Farmer', 'Im gonna become a pirate'],
+    ['you', 'Farmer', 'and join your ship'],
+    ['you', 'Farmer', 'i love pancakes'],
+    ['peer', 'Pancake flipping pirate', 'Welcome aboard'],
+    ['peer', 'Pancake flipping pirate', 'you can call me Captain Breakfast'],
+  ],
 }
 
 const realChat = [
@@ -26,12 +26,12 @@ const realChat = [
   ['peer', 'Your Peer', 'It has been a wild day for me'],
   ['you', 'Real You', 'Oh. how come'],
   ['peer', 'Your Peer', 'I had an algebra test in school'],
-  ['peer', 'Your Peer', 'it was super hard']
+  ['peer', 'Your Peer', 'it was super hard'],
 ]
 
 const secondChat = {
   title: 'Switch to your real self anytime',
-  titleColor: 'black'
+  titleColor: 'black',
 }
 
 const HomePage = () => {
@@ -40,7 +40,7 @@ const HomePage = () => {
     color: 'black',
     fontWeight: 'normal',
     marginBottom: '12px',
-    letterSpacing: '0.5px'
+    letterSpacing: '0.5px',
   }
 
   return (
