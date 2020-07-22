@@ -21,12 +21,11 @@ const firstChat = {
 }
 
 const realChat = [
-  ['you', 'Real You', 'Hi. How are u doing?'],
-  ['peer', 'Your Peer', 'So busy lol.'],
-  ['peer', 'Your Peer', 'It has been a wild day for me'],
-  ['you', 'Real You', 'Oh. how come'],
-  ['peer', 'Your Peer', 'I had an algebra test in school'],
-  ['peer', 'Your Peer', 'it was super hard'],
+  ['you', 'Real You', 'haha i really like your character'],
+  ['you', 'Real You', 'im a massive fan of pirate movies'],
+  ['peer', 'Your Peer', 'lol thanks'],
+  ['peer', 'Your Peer', 'yeah i like Pirates of the Caribbean'],
+  ['peer', 'Your Peer', 'you ever see that?'],
 ]
 
 const secondChat = {
