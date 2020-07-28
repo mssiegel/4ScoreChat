@@ -20,6 +20,7 @@
 /* navbar styles from navbar how-to css video at: https://youtu.be/8QKOaTYvYUA */
 :root {
   --background: linear-gradient(177deg, #00bff5, #87002a);
+  --navbar-height: 65px;
 }
 
 .nav-container {
@@ -28,12 +29,12 @@
   position: absolute;
   z-index: 999;
   width: 100%;
-  height: 65px;
+  height: var(--navbar-height);
 }
 
 .nav-title {
   display: flex;
-  height: 100%;
+  height: var(--navbar-height);
   justify-content: center;
 }
 
