@@ -22,7 +22,9 @@ const Header = () => (
               <Link to='/chatroom/'>Chatroom</Link>
             </li>
             <li>
-              <Link to='/single-player'>Single Player</Link>
+              <a target='_blank' href='https://discord.gg/hXvatgM'>
+                Discord
+              </a>
             </li>
             <li>
               <Dropdown />

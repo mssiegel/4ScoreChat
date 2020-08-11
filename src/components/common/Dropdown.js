@@ -24,6 +24,7 @@ const Dropdown = () => {
         <div className='dropdown-content'>
           <Link to='/example-improvs'>Examples</Link>
           <Link to='/improv-tips'>Tips</Link>
+          <Link to='/single-player'>Single Player</Link>
           <Link to='/about'>About</Link>
         </div>
       )}
