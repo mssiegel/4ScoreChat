@@ -14,15 +14,15 @@ const ContactPage = () => {
         <div className='common-center'>
           <p>
             A guy from New York started 4ScoreChat to meet new people, chat, and have fun. By taking improv classes at
-            UCB Theater and doing public speaking at the New York Toastmasters club, the dude became involved in
+            UCB Theatre and doing public speaking at the New York Toastmasters club, the dude became involved in
             communities that let him be his creative self. An entrepreneur at heart, he created 4ScoreChat to go on
             crazy improv adventures at the click of a button.
           </p>
 
           <p>
-            Our mission is to build a community that fosters imagination, friendships, and a love for improv. If you
-            have suggestions or ideas for improvement, then let us know. Also, We are based out of New York City and are
-            looking for help with marketing and engineering (our tech stack is React/NodeJs).
+            Our mission is to build a community that fosters imagination, friendships, and a love for improv. We are
+            based out of New York City and are looking for help with marketing and engineering (our tech stack is
+            React/NodeJs).
           </p>
 
           <p>
