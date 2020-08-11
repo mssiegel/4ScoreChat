@@ -22,7 +22,7 @@ const Header = () => (
               <Link to='/chatroom/'>Chatroom</Link>
             </li>
             <li>
-              <a target='_blank' href='https://discord.gg/hXvatgM'>
+              <a target='_blank' rel='noopener noreferrer' href='https://discord.gg/hXvatgM'>
                 Discord
               </a>
             </li>

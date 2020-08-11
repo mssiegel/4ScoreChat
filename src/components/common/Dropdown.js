@@ -25,7 +25,7 @@ const Dropdown = () => {
           <Link to='/example-improvs'>Examples</Link>
           <Link to='/improv-tips'>Tips</Link>
           <Link to='/single-player'>Single Player</Link>
-          <Link to='/about'>About</Link>
+          <Link to='/contact'>Contact</Link>
         </div>
       )}
     </>
