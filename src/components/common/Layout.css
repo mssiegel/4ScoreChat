@@ -23,6 +23,18 @@ body {
   text-align: center;
 }
 
+.white {
+  color: white;
+}
+
+.improv-background {
+  background: #f8e5e0;
+}
+
+.real-chat-background {
+  background: #e0f8ff;
+}
+
 /* Default Gatsby Styles */
 
 html {

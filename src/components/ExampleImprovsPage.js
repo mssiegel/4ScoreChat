@@ -315,8 +315,8 @@ const example3 = {
 const ExampleImprovsPage = () => {
   return (
     <>
-      <section className='examples-page-wrapper'>
-        <h1 className='page-title examples-padding-bottom'>Example Improvs</h1>
+      <section className='white'>
+        <h1 className='page-title'>Example Improvs</h1>
 
         <div className='center-chatbox examples-padding-bottom'>
           <SampleChatbox chat={example1} />

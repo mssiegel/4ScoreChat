@@ -9,8 +9,8 @@ const ContactPage = () => {
 
   return (
     <>
-      <section className='page-wrapper'>
-        <h1 className='page-title'>Contact</h1>
+      <h1 className='page-title white'>Contact</h1>
+      <section className='page-wrapper real-chat-background'>
         <div className='common-center'>
           <p>
             A guy from New York started 4ScoreChat to meet new people, chat, and have fun. By taking improv classes at
@@ -30,8 +30,8 @@ const ContactPage = () => {
           </p>
 
           <p style={disclaimer}>
-            Disclaimer: By using our site you agree to have fun, entertaining improv chats. You also acknowledge you can
-            end a chat at any time and agree to not hold us responsible for any claims made during chats.
+            By using our site you agree to have fun, entertaining improv conversations. You also acknowledge you can
+            leave anytime and agree to not hold us responsible for anything said during your chats.
           </p>
         </div>
       </section>

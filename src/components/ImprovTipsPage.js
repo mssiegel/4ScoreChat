@@ -47,8 +47,8 @@ const oneLineAtATime = {
 const ImprovTipsPage = () => {
   return (
     <>
-      <section className='page-wrapper'>
-        <h1 className='page-title'>Improv Tips</h1>
+      <h1 className='page-title white'>Improv Tips</h1>
+      <section className='page-wrapper improv-background'>
         <div className='common-center'>
           <Lesson lessonContent={yesAnd} />
           <Lesson lessonContent={oneLineAtATime} />
