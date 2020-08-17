@@ -13,30 +13,30 @@ const EmailSignup = () => {
     maxWidth: '800px',
     marginLeft: 'auto',
     marginRight: 'auto',
-    borderRadius: '5px'
+    borderRadius: '5px',
   }
 
   const signupText = {
     color: '#0070FF',
-    fontSize: '21px'
+    fontSize: '21px',
   }
 
   const emailInput = {
-    fontSize: '17px'
+    fontSize: '17px',
   }
 
   const formNoBottomMargin = {
-    marginBottom: '7px'
+    marginBottom: '7px',
   }
 
   const fakeInput = {
     position: 'absolute',
-    left: '-5000px'
+    left: '-5000px',
   }
 
   const submitButton = {
     fontSize: '21px',
-    background: '#87002A'
+    background: '#87002A',
   }
 
   return (

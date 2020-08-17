@@ -9,7 +9,7 @@ const SampleChatbox = ({ chat, improvMode = true, realChat }) => {
     fontWeight: 'normal',
     marginBottom: '12px',
     marginTop: '20px',
-    letterSpacing: '0.5px'
+    letterSpacing: '0.5px',
   }
 
   const backgroundColor = { background: improvMode ? '#f8e5e0' : '#E0F8FF' }

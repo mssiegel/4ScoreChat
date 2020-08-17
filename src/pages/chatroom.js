@@ -27,7 +27,7 @@ const Chatroom = () => {
     'try to get better and better. When your chat ends, review it. Look for ways to improve your chatting skills',
     'cooperation works wonders. See your peer as your partner in creating a beautiful storyline',
     "chats can get intense. Come prepared with a box of tissues and a shoulder to lean on...or don't",
-    'partner with your peer to create deep, intense, emotional storylines'
+    'partner with your peer to create deep, intense, emotional storylines',
   ]
   const randomTip = tips[Math.floor(Math.random() * tips.length)]
 

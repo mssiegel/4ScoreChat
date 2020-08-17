@@ -9,12 +9,12 @@ const yesAnd = {
   goodImprov: [
     ['Goblin king', "Roarrrr!! I'm ready for battle"],
     ['Farmer', 'Me too!! My blood is boiling!'],
-    ['Farmer', 'I brought my steam-powered jumbo ax']
+    ['Farmer', 'I brought my steam-powered jumbo ax'],
   ],
   badImprov: [
     ['Goblin king', "Roarrrr!! I'm ready for battle"],
-    ['Farmer', "What are you talking about? There's no fight going on."]
-  ]
+    ['Farmer', "What are you talking about? There's no fight going on."],
+  ],
 }
 
 const startPositive = {
@@ -23,9 +23,9 @@ const startPositive = {
     "Don't start with a character called 'sad sheriff' or 'boring teacher'. Those kinds of lackluster starts usually lead to boring scenes. Instead, pick character names such as 'Sam the Sheriff' or use adjectives such as 'tiny sherriff' or 'teacher from Mars.' The same goes regarding your first statements. Don't start a scene by saying 'you are weird and uncool.' Instead start with something exciting like, 'I LOVE your clothing style!",
   goodImprov: [
     ['Big knight', 'WOW! Your Muscles are soooo HUGE.'],
-    ['Store owner', "That's right! Every day I do 300 pushups!"]
+    ['Store owner', "That's right! Every day I do 300 pushups!"],
   ],
-  badImprov: [['Sad alien', 'Hi, I am lost'], ['Karate dude', 'Hi, I am an unhappy karate person']]
+  badImprov: [['Sad alien', 'Hi, I am lost'], ['Karate dude', 'Hi, I am an unhappy karate person']],
 }
 
 const oneLineAtATime = {
@@ -36,12 +36,12 @@ const oneLineAtATime = {
     ['Robert', 'That tentacled monster is oozing so much slime'],
     ['Samantha', 'Be careful'],
     ['Samantha', 'Its eyes are hypnotic'],
-    ['Samantha', 'And it falls in love with any man it sees']
+    ['Samantha', 'And it falls in love with any man it sees'],
   ],
   badImprov: [
     ['Robert', 'That tentacled monster is oozing so much slime'],
-    ['Samantha', 'Be careful. Its eyes are hypnotic. And it falls in love with any man it sees']
-  ]
+    ['Samantha', 'Be careful. Its eyes are hypnotic. And it falls in love with any man it sees'],
+  ],
 }
 
 const ImprovTipsPage = () => {

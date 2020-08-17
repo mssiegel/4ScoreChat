@@ -108,14 +108,14 @@ const SinglePlayerPage = () => {
                         value={player1}
                         placeholder='Your Character'
                         maxLength='20'
-                        onChange={(e) => setPlayer1(e.target.value)}
+                        onChange={e => setPlayer1(e.target.value)}
                       />
                       <input
                         className='username red-font'
                         value={player2}
                         placeholder='Your Character'
                         maxLength='20'
-                        onChange={(e) => setPlayer2(e.target.value)}
+                        onChange={e => setPlayer2(e.target.value)}
                       />
                       <button className='edit-names' onClick={() => setEditingUsernames(false)} type='button'>
                         Done Editing
@@ -148,8 +148,8 @@ const SinglePlayerPage = () => {
                   value={message}
                   placeholder='Say something'
                   maxLength='75'
-                  onKeyDown={(e) => switchIfTabPressed(e)}
-                  onChange={(e) => setMessage(e.target.value)}
+                  onKeyDown={e => switchIfTabPressed(e)}
+                  onChange={e => setMessage(e.target.value)}
                   ref={messageInput}
                   disabled={editingUsernames}
                 />
