@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../../images/wizard-hat.jpg'
-import './Header.css'
+import './Navbar.css'
 import Dropdown from './Dropdown'
 
-const Header = () => (
+const Navbar = () => (
   <>
     <header>
       <div className='nav-container'>
@@ -40,4 +40,4 @@ const Header = () => (
   </>
 )
 
-export default Header
+export default Navbar

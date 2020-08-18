@@ -1,10 +1,10 @@
 import React from 'react'
 import './common/common.css'
+import EmailSignup from './common/EmailSignup'
 
 const ContactPage = () => {
-  const disclaimer = {
-    marginTop: '50px',
-    fontSize: '15px',
+  const contactEmail = {
+    fontSize: '24px',
   }
 
   return (
@@ -22,20 +22,16 @@ const ContactPage = () => {
           <p>
             Our mission is to build a community that fosters imagination, friendships, and a love for improv. We are
             based out of New York City and are looking for help with marketing and engineering (our tech stack is
-            React/NodeJs).
+            React/NodeJs). Remote collaboration works too.
           </p>
 
-          <p>
+          <p style={contactEmail}>
             <b>Contact: </b>Our email is <a href='mailto:4ScoreChat@gmail.com'>4ScoreChat@gmail.com</a>
           </p>
-
-          <p style={disclaimer}>
-            By using our site you agree to have fun, entertaining improv conversations. You also acknowledge you can
-            leave anytime and agree to not hold us responsible for anything said during your chats.
-          </p>
+          <br />
+          <EmailSignup />
         </div>
       </section>
-      <div className='empty-space-on-bottom'></div>
     </>
   )
 }

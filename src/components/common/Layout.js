@@ -8,14 +8,14 @@
 import React from 'react'
 
 import 'typeface-roboto'
-import Header from './Header'
+import Navbar from '../navbar/Navbar'
 import './Layout.css'
 
 const Layout = ({ children }) => {
   return (
     <>
       <div className='color-background'>
-        <Header />
+        <Navbar />
         <main>{children}</main>
       </div>
     </>

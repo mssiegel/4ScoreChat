@@ -55,7 +55,6 @@ const ImprovTipsPage = () => {
           <Lesson lessonContent={startPositive} />
         </div>
       </section>
-      <div className='empty-space-on-bottom'></div>
     </>
   )
 }

@@ -4,10 +4,9 @@ import './Homepage.css'
 import heroBoy from '../../images/hero-boy.png'
 import SampleChatbox from '../chatbox/SampleChatbox'
 import ListItems from './ListItems'
-import EmailSignup from './EmailSignup'
 
 const firstChat = {
-  title: 'Enter as anyone',
+  title: 'Be anyone',
   titleColor: 'black',
   you: 'Farmer',
   peer: 'Pancake flipping pirate',
@@ -29,19 +28,11 @@ const realChat = [
 ]
 
 const secondChat = {
-  title: 'Switch to your real self anytime',
+  title: 'Switch to your real self',
   titleColor: 'black',
 }
 
 const HomePage = () => {
-  const subtitleStyle = {
-    textAlign: 'center',
-    color: 'black',
-    fontWeight: 'normal',
-    marginBottom: '12px',
-    letterSpacing: '0.5px',
-  }
-
   return (
     <>
       <section id='first-page' className='grid vertical-align'>
@@ -50,7 +41,7 @@ const HomePage = () => {
           <h1 id='intro-title'>Instant Improv</h1>
           <h2 id='intro-subtitle'>Make new friends {'&'} chat away</h2>
           <div>
-            <img className='visit-chatroom-image' src={heroBoy} alt='Picture of costumed boy hero' />
+            <img className='visit-chatroom-image' src={heroBoy} alt='Costumed boy hero' />
           </div>
           <Link to='/chatroom/'>
             <button className='visit-chatroom-button btn'>Pick your character</button>
@@ -64,8 +55,6 @@ const HomePage = () => {
         <div></div>
       </section>
 
-      <EmailSignup />
-
       <section id='second-page' className='grid'>
         <div></div>
         <SampleChatbox chat={firstChat} />
@@ -78,6 +67,10 @@ const HomePage = () => {
         <Link to='/chatroom/'>
           <button className='visit-chatroom-button btn'>Pick your character</button>
         </Link>
+        <p className='disclaimer'>
+          By using 4ScoreChat, you acknowledge this is the internet and agree not to hold us responsible for anything
+          said, no matter how gooey or yucky.
+        </p>
       </div>
     </>
   )
