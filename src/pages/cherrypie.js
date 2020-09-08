@@ -7,7 +7,7 @@ import ChatroomPage from '../components/cherryPie/ChatroomPage'
 import io from 'socket.io-client'
 
 //Initialize socket outside of Chatroom component so as to keep socket unchanged even if user clicks Chatroom link in navbar
-const serverUrl = 'http://localhost:4000/cherryPie'
+const serverUrl = 'https://scorechat.herokuapp.com/cherryPie' // 'http://localhost:4000/cherryPie'
 const socket = io(serverUrl)
 
 const Chatroom = () => {
