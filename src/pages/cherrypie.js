@@ -3,11 +3,11 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/common/Layout'
 import SEO from '../components/seo'
-import ChatroomPage from '../components/chatroomPage/ChatroomPage'
+import ChatroomPage from '../components/cherryPie/ChatroomPage'
 import io from 'socket.io-client'
 
 //Initialize socket outside of Chatroom component so as to keep socket unchanged even if user clicks Chatroom link in navbar
-const serverUrl = 'https://scorechat.herokuapp.com/' // 'http://localhost:4000'
+const serverUrl = 'http://localhost:4000/cherryPie'
 const socket = io(serverUrl)
 
 const Chatroom = () => {
