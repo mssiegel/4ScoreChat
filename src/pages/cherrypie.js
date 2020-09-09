@@ -34,7 +34,7 @@ const Chatroom = () => {
   return (
     <Layout>
       <SEO
-        title='Chatroom'
+        title='Cherry Pie'
         description='Our chatroom where people get paired with each other. Be whomever you want and start start a chat. Have fun and get connected.'
       />
       <ChatroomPage socket={socket} randomTip={randomTip} />
