@@ -4,6 +4,7 @@ module.exports = {
     description: `4ScoreChat lets you pick a character and instantly start chatting with a stranger. It's the perfect place to exercise your imagination in a family-friendly way.`,
     author: `Moshe Siegel`,
     siteUrl: 'https://www.4scorechat.com/',
+    thumbnailImage: '/ogThumbnail/wizard-hat-thumbnail.jpg',
   },
   plugins: [
     `gatsby-plugin-sitemap`,
