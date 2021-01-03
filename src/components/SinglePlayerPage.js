@@ -85,7 +85,7 @@ const SinglePlayerPage = () => {
             Reset chat
           </button>
         </div>
-        <div className='center-chatbox'>
+        <div className='flex-center'>
           <div className='chat-container'>
             <div className='chatbox' style={backgroundColor}>
               <div className='chatbox-text-wrapper'>

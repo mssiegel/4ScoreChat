@@ -318,19 +318,19 @@ const ExampleImprovsPage = () => {
       <section className='white'>
         <h1 className='page-title'>Example Improvs</h1>
 
-        <div className='center-chatbox examples-padding-bottom'>
+        <div className='flex-center examples-padding-bottom'>
           <SampleChatbox chat={example1} />
         </div>
 
-        <div className='center-chatbox examples-padding-bottom'>
+        <div className='flex-center examples-padding-bottom'>
           <SampleChatbox chat={paddingtonExample} />
         </div>
 
-        <div className='center-chatbox examples-padding-bottom'>
+        <div className='flex-center examples-padding-bottom'>
           <SampleChatbox chat={example2} />
         </div>
 
-        <div className='center-chatbox examples-padding-bottom'>
+        <div className='flex-center examples-padding-bottom'>
           <SampleChatbox chat={example3} />
         </div>
       </section>

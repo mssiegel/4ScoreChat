@@ -8,7 +8,7 @@ const ListItems = () => {
   return (
     <div className='list-item-container'>
       <div className='list-item'>
-        <div className='flex'>
+        <div className='flex-center'>
           <WhatshotIcon />
           <h3 className='list-subtitle'>Meet cool people</h3>
         </div>
@@ -16,7 +16,7 @@ const ListItems = () => {
       </div>
 
       <div className='list-item'>
-        <div className='flex'>
+        <div className='flex-center'>
           <FilterVintageIcon />
           <h3 className='list-subtitle'>Family Friendly</h3>
         </div>
@@ -26,7 +26,7 @@ const ListItems = () => {
       </div>
 
       <div className='list-item final-list-item'>
-        <div className='flex'>
+        <div className='flex-center'>
           <FavoriteIcon />
           <h3 className='list-subtitle'>Connect emotionally</h3>
         </div>

@@ -5,11 +5,11 @@ import Layout from '../components/common/Layout'
 import SEO from '../components/seo'
 import SinglePlayerPage from '../components/SinglePlayerPage'
 
-const ImprovTips = () => (
+const SinglePlayer = () => (
   <Layout>
     <SEO title='Single Player' description='Create your own conversations. Write your own chats.' />
     <SinglePlayerPage />
   </Layout>
 )
 
-export default ImprovTips
+export default SinglePlayer

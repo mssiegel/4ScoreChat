@@ -7,16 +7,9 @@ const Conversation = ({ chat, realChat, improvMode, sampleOnly }) => {
     setOriginalChar(chat.you)
   }, [])
 
-  let you, peer, conversation
-  if (improvMode) {
-    you = originalChar
-    peer = chat.peer
-    conversation = chat.conversation
-  } else {
-    you = 'Real You'
-    peer = 'Your Peer'
-    conversation = realChat
-  }
+  const you = improvMode ? originalChar : 'Real You'
+  const peer = improvMode ? chat.peer : 'Your Peer'
+  const conversation = improvMode ? chat.conversation : realChat
 
   return (
     <div className='chatbox-text-wrapper'>

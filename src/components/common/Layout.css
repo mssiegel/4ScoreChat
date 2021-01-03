@@ -35,6 +35,11 @@ body {
   background: #e0f8ff;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 /* Default Gatsby Styles */
 
 html {

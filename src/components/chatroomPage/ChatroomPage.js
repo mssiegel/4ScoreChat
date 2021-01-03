@@ -55,7 +55,7 @@ const ChatroomPage = ({ socket, randomTip }) => {
         {waitingForPeer && <WaitingForPeerMessage cancelSearch={cancelSearch} />}
       </section>
       {chatInSession && (
-        <div className='center-chatbox'>
+        <div className='flex-center'>
           <Chatbox
             chat={chat}
             setChat={setChat}

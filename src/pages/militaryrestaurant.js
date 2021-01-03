@@ -109,7 +109,7 @@ const ExampleImprovPage = () => {
       <section className='examples-page-wrapper'>
         {/*<h1 className='page-title examples-padding-bottom'>Example Improvs</h1>*/}
 
-        <div className='center-chatbox examples-padding-bottom'>
+        <div className='flex-center examples-padding-bottom'>
           <SampleChatbox chat={example1} />
         </div>
       </section>
