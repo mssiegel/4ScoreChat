@@ -15,7 +15,7 @@ function copyToClipboard() {
   document.body.removeChild(el)
 }
 
-const socket = io(process.env.SERVER_URL)
+const socket = io(process.env.SERVER_URL + '/private')
 
 const PrivateRoom = ({ roomId }) => {
   socket.connect()

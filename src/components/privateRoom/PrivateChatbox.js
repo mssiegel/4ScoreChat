@@ -50,7 +50,7 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
         message.improvMode
           ? setChat(chat => ({
               ...chat,
-              conversation: [...chat.conversation, ['peer', message.userName, message.message]],
+              conversation: [...chat.conversation, ['peer', message.sender, message.text]],
             }))
           : setRealChat(realChat => ({
               ...realChat,

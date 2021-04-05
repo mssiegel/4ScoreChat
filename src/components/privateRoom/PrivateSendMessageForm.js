@@ -21,42 +21,31 @@ const PrivateSendMessageForm = ({
   function sendMessage(e) {
     console.log('sendMessage(e) ran!!!')
     e.preventDefault()
-    if (!improvMode && message) {
-      setRealChat({ ...realChat, conversation: [...realChat.conversation, ['you', realChat.you, message]] })
-      setMessage('')
-      scrollToBottomOfChat()
+    console.log('message', message)
+    if (!message) return messageInput.current.focus()
 
-      if (socket) {
-        socket.emit('private chat message', {
-          sender: realChat.you,
-          roomId,
-          text: message,
-          improvMode,
-        })
-      }
+    improvMode
+      ? setChat({ ...chat, conversation: [...chat.conversation, ['you', chat.you, message]] })
+      : setRealChat({ ...realChat, conversation: [...realChat.conversation, ['you', realChat.you, message]] })
+    setMessage('')
+    scrollToBottomOfChat()
+
+    if (socket) {
+      socket.emit('private chat message', {
+        sender: improvMode ? chat.you : realChat.you,
+        roomId,
+        text: message,
+        improvMode,
+      })
     }
 
-    if (improvMode && chat.you && message) {
-      console.log('message', message)
-      improvMode
-        ? setChat({ ...chat, conversation: [...chat.conversation, ['you', chat.you, message]] })
-        : setRealChat([...realChat, ['you', 'Real You', message]])
-      if (socket) {
-        socket.emit('chat message', {
-          userName: chat.you,
-          message,
-          improvMode,
-        })
-      }
-      setMessage('')
-      scrollToBottomOfChat()
-    }
     messageInput.current.focus()
   }
 
   function userTyping(e) {
     setMessage(e.target.value)
-    if (socket) socket.emit('typing', improvMode ? chat.you : 'Your Peer')
+    console.log('typing!!!')
+    if (socket) socket.emit('typing', improvMode ? chat.you : realChat.you)
   }
 
   return (
