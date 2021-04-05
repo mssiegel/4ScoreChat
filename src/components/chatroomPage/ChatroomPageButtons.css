@@ -10,11 +10,6 @@
   background: black;
 }
 
-.disabled {
-  cursor: not-allowed;
-  opacity: 0.4;
-}
-
 .no-internet {
   max-width: 600px;
   margin: 20px auto 0 auto;

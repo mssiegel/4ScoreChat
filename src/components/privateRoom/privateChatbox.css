@@ -1,0 +1,17 @@
+.private-center-children {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.private-enter-name {
+  color: black;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+
+.private-min-height-bottom {
+  min-height: 110px;
+}

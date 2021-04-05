@@ -44,6 +44,7 @@ const Chatbox = ({ chat, setChat, setChatInSession, realChat, setRealChat, socke
 
     //If chat is on, then message input exists and focus on it whether starting chat or switching to/from improvMode
     if (!chatEnded) messageInput.current.focus()
+    // TODO: add to your list to refactor the message input focus into its own separate useEffect()
 
     return () => {
       if (socket) {

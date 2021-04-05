@@ -1,0 +1,9 @@
+.copy-link {
+  color: black;
+  margin-left: 10px;
+}
+
+.copy-link:focus {
+  background-color: #ddd;
+  outline: none;
+}

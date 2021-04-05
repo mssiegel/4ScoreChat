@@ -22,12 +22,23 @@ const Navbar = () => (
               <Link to='/chatroom/'>Chatroom</Link>
             </li>
             <li>
-              <a target='_blank' rel='noopener noreferrer' href='https://discord.gg/hXvatgM'>
-                Discord
-              </a>
+              <Dropdown
+                title='Special Chats'
+                links={[
+                  { link: '/private-rooms', text: 'Private Rooms' },
+                  { link: '/single-player', text: 'Single Player' },
+                ]}
+              />
             </li>
             <li>
-              <Dropdown />
+              <Dropdown
+                title='About'
+                links={[
+                  { link: '/example-improvs', text: 'Examples' },
+                  { link: '/improv-tips', text: 'Tips' },
+                  { link: '/contact', text: 'Contact' },
+                ]}
+              />
             </li>
           </ul>
         </nav>
