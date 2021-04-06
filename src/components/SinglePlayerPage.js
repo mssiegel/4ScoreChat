@@ -80,7 +80,7 @@ const SinglePlayerPage = () => {
         <h1 className='page-title' style={{ color: 'white' }}>
           Single Player
         </h1>
-        <div className='reset-chat-container'>
+        <div className='flex-center'>
           <button className='btn reset-chat' onClick={resetChat}>
             Reset chat
           </button>

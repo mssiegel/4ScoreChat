@@ -34,8 +34,9 @@
 ## Setup instructions
 
 1. `npm install`
-2. `npm run develop`
-3. Download the [backend repo](https://github.com/mssiegel/4Score-server) and run it on a separate server
+2. `npm run dev`
+3. Duplicate `.env.example`, rename the new file `.env.development`, and populate it with the required values
+4. Download the [backend repo](https://github.com/mssiegel/4Score-server) and run it on a separate server
 
 ## Backend Repo
 

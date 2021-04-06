@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import './Dropdown.css'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown'
 
-const Dropdown = () => {
+const Dropdown = ({ title, links }) => {
   useEffect(() => {
     document.addEventListener('click', closeDropdown)
     return () => document.removeEventListener('click', closeDropdown)
@@ -18,14 +18,15 @@ const Dropdown = () => {
   return (
     <>
       <div className='dropdown' onClick={() => setOpened(!opened)}>
-        More Info <ArrowDropDownIcon />
+        {title} <ArrowDropDownIcon />
       </div>
       {opened && (
         <div className='dropdown-content'>
-          <Link to='/example-improvs'>Examples</Link>
-          <Link to='/improv-tips'>Tips</Link>
-          <Link to='/single-player'>Single Player</Link>
-          <Link to='/contact'>Contact</Link>
+          {links.map(({ link, text }, i) => (
+            <Link to={link} key={i}>
+              {text}
+            </Link>
+          ))}
         </div>
       )}
     </>
