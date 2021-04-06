@@ -18,12 +18,10 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
 
   const messageInput = useRef(null)
   const backgroundColor = { background: improvMode ? '#f8e5e0' : '#E0F8FF' }
-  console.log('unread', unread)
+
   useEffect(() => {
-    console.log(socket.id)
     if (socket) {
       socket.on('user entered', realName => {
-        console.log('user entered realName:', realName)
         setRealChat(realChat => ({
           ...realChat,
           conversation: [...realChat.conversation, ['you', '', `${realName} has joined the chat`]],
@@ -31,11 +29,8 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
       })
 
       socket.on('user left', realName => {
-        console.log('user left realName:', realName)
-        if (improvMode) {
-          setUnread(unread => unread + 1)
-          console.log('HERERERE')
-        }
+        if (improvMode) setUnread(unread => unread + 1)
+
         setRealChat(realChat => ({
           ...realChat,
           conversation: [...realChat.conversation, ['you', '', `${realName} has left the chat`]],
@@ -45,7 +40,6 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
       socket.on('private chat message', message => {
         setPeerTyping(false)
         clearTimeout(eraseTypingMessage)
-        console.log(realChat)
         if (improvMode !== message.improvMode) setUnread(unread => unread + 1)
         message.improvMode
           ? setChat(chat => ({
@@ -59,8 +53,8 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
         scrollToBottomOfChat()
       })
 
-      socket.on('typing', userName => {
-        setPeerTyping(userName)
+      socket.on('typing', username => {
+        setPeerTyping(username)
         //clears old timeout if applicable
         if (eraseTypingMessage) clearTimeout(eraseTypingMessage)
         eraseTypingMessage = setTimeout(() => setPeerTyping(false), 4000)
@@ -75,7 +69,7 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
         socket.off('typing')
       }
     }
-  }, [improvMode, realChat, setChat, setRealChat, socket])
+  }, [improvMode, setChat, setRealChat, socket])
 
   useEffect(() => {
     if (messageInput.current) messageInput.current.focus()
@@ -86,8 +80,6 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
   }
 
   function submitRealName(e) {
-    console.log('ran submitRealName(e)')
-    console.log(realChat.you)
     e.preventDefault()
     if (!realChat.you) return
 
@@ -108,16 +100,15 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
   return (
     <>
       <div className='chat-container'>
-        <div className={`chatbox ${!hasRealName ? 'private-center-children' : ''}`} style={backgroundColor}>
-          {/* TODO: Refactor this div to use DRY */}
-          {!hasRealName && !improvMode && (
+        <div className={`chatbox ${!hasRealName ? 'center-children' : ''}`} style={backgroundColor}>
+          {!hasRealName ? (
             <form onSubmit={submitRealName}>
-              <p className='private-enter-name black'>Your real name:</p>
+              <p className='private-enter-name-text black'>Your real name:</p>
               <input
                 maxLength='25'
                 value={realChat.you}
                 placeholder='Your name'
-                className='private-username'
+                className='private-enter-name-input'
                 onChange={e => setRealChat({ ...realChat, you: e.target.value })}
               ></input>
               <Fab
@@ -129,8 +120,7 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
                 <SendIcon />
               </Fab>
             </form>
-          )}
-          {hasRealName && (
+          ) : (
             <>
               <PrivateStickyButtons
                 improvMode={improvMode}
@@ -158,7 +148,6 @@ const PrivateChatbox = ({ chat, setChat, realChat, setRealChat, socket, roomId }
                 improvMode={improvMode}
                 scrollToBottomOfChat={scrollToBottomOfChat}
                 messageInput={messageInput}
-                roomId={roomId}
               />
             </>
           )}

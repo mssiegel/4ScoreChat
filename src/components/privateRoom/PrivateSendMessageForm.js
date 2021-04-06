@@ -14,14 +14,11 @@ const PrivateSendMessageForm = ({
   setRealChat,
   improvMode,
   messageInput,
-  roomId,
 }) => {
   const [message, setMessage] = useState('')
 
   function sendMessage(e) {
-    console.log('sendMessage(e) ran!!!')
     e.preventDefault()
-    console.log('message', message)
     if (!message) return messageInput.current.focus()
 
     improvMode
@@ -43,7 +40,6 @@ const PrivateSendMessageForm = ({
 
   function userTyping(e) {
     setMessage(e.target.value)
-    console.log('typing!!!')
     if (socket) socket.emit('typing', improvMode ? chat.you : realChat.you)
   }
 
@@ -53,7 +49,7 @@ const PrivateSendMessageForm = ({
         <input
           className='username'
           value={chat.you}
-          placeholder='Your Character'
+          placeholder='Your character'
           maxLength='30'
           onChange={e => setChat({ ...chat, you: e.target.value })}
         />
@@ -61,14 +57,12 @@ const PrivateSendMessageForm = ({
         <p className='current-user'>{realChat.you}</p>
       )}
 
-      {improvMode && !chat.you && (
+      {improvMode && !chat.you ? (
         <div>
           <br />
-          <SuggestCharacterButton waitingForPeer={false} setChat={setChat} chat={chat} />
+          <SuggestCharacterButton setChat={setChat} chat={chat} />
         </div>
-      )}
-
-      {(!improvMode || chat.you) && (
+      ) : (
         <>
           <input
             className='message'
