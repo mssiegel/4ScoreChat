@@ -6,7 +6,7 @@ import ChatroomPage from '../components/chatroomPage/ChatroomPage'
 import io from 'socket.io-client'
 
 //Initialize socket outside of Chatroom component so as to keep socket unchanged even if user clicks Chatroom link in navbar
-const socket = io(process.env.SERVER_URL)
+const socket = io('https://scorechat.herokuapp.com/')
 
 const Chatroom = () => {
   socket.connect()
