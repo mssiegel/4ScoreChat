@@ -13,7 +13,7 @@ import PrivateRoomsPage from '../components/PrivateRoomsPage'
 const PrivateRooms = () => {
   return (
     <Layout>
-      <SEO title='Private Rooms' description='Create a private room. Only those you invite will be able to join.' />
+      <SEO title='Private Rooms' description='Create a private room. Only those with the link will be able to join.' />
       <Router basepath='/private-rooms'>
         <PrivateRoomsPage path='/' />
         <PrivateRoom path='/:roomId' />

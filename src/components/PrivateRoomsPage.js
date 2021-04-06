@@ -17,7 +17,7 @@ const PrivateRoomsPage = () => {
       <h1 className='page-title white'>Private Rooms</h1>
       <section className='page-wrapper real-chat-background'>
         <div className='common-center'>
-          <p className='center-text'>Create a private room. Only those you invite will be able to join.</p>
+          <p className='center-text'>Create a private room. Only those with the link will be able to join.</p>
           <div className='flex-center'>
             <button className='visit-chatroom-button btn' onClick={createPrivateRoom}>
               Create private room
