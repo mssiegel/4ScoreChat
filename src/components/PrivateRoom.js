@@ -5,16 +5,6 @@ import './PrivateRoom.css'
 import './ExampleImprovsPage.css'
 import PrivateChatbox from './privateRoom/PrivateChatbox'
 
-// move copyToClipboard() into component prior to git committing
-function copyToClipboard() {
-  const el = document.createElement('textarea')
-  document.body.appendChild(el)
-  el.value = window.location.href
-  el.select()
-  document.execCommand('copy')
-  document.body.removeChild(el)
-}
-
 const socket = io(process.env.SERVER_URL + '/private')
 
 const PrivateRoom = ({ roomId }) => {
@@ -30,7 +20,7 @@ const PrivateRoom = ({ roomId }) => {
       <h1 className='page-title white'>Private Room</h1>
       <p className='center-text'>
         To invite your friend(s) to this room, send them the link.{' '}
-        <button className='btn copy-link' onClick={copyToClipboard}>
+        <button className='btn copy-link' onClick={copyUrl}>
           Copy room link
         </button>
       </p>
@@ -46,6 +36,16 @@ const PrivateRoom = ({ roomId }) => {
       </div>
     </section>
   )
+}
+
+function copyUrl() {
+  // copies the page's url to clipboard
+  const el = document.createElement('textarea')
+  document.body.appendChild(el)
+  el.value = window.location.href
+  el.select()
+  document.execCommand('copy')
+  document.body.removeChild(el)
 }
 
 export default PrivateRoom

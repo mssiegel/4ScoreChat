@@ -1,17 +1,12 @@
 import React from 'react'
 import { navigate } from 'gatsby'
+import { nanoid } from 'nanoid'
 
 import './common/common.css'
 
 const PrivateRoomsPage = () => {
   async function createPrivateRoom() {
-    console.log('create Private Room clicked!')
-    /*
-    const roomUrl = await fetch(`${process.env.SERVER_URL}/private-rooms`, {
-      method: 'POST',
-    })
-    */
-    const roomUrl = 'axdg1gs7dxa'
+    const roomUrl = nanoid(6)
     navigate(`/private-rooms/${roomUrl}`)
   }
 
