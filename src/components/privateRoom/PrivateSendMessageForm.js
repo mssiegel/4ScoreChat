@@ -33,7 +33,6 @@ const PrivateSendMessageForm = ({
     if (socket) {
       socket.emit('private chat message', {
         sender: improvMode ? chat.you : realChat.you,
-        roomId,
         text: message,
         improvMode,
       })
