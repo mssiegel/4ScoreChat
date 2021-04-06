@@ -5,7 +5,7 @@ import './PrivateRoom.css'
 import './ExampleImprovsPage.css'
 import PrivateChatbox from './privateRoom/PrivateChatbox'
 
-const socket = io(process.env.SERVER_URL + '/private')
+const socket = io('https://scorechat.herokuapp.com/private')
 
 const PrivateRoom = ({ roomId }) => {
   socket.connect()
