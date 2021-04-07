@@ -7,11 +7,11 @@ import io from 'socket.io-client'
 
 //Initialize socket outside of Chatroom component so as to keep socket unchanged even if user clicks Chatroom link in navbar
 const socket = io('https://scorechat.herokuapp.com/')
+// const socket = io('http://localhost:4000')
 
 const Chatroom = () => {
-  socket.connect()
-  //disconnects socket when user leaves Chatroom Page
-  useEffect(() => () => socket.disconnect(), [])
+  // automatically ends chat when user leaves Chatroom Page
+  useEffect(() => () => socket.emit('end chat'), [])
 
   const tips = [
     'feel free to EXAGGERATE your words by using capital letters',

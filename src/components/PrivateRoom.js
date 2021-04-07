@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import io from 'socket.io-client'
 
 import './PrivateRoom.css'
@@ -6,12 +6,9 @@ import './ExampleImprovsPage.css'
 import PrivateChatbox from './privateRoom/PrivateChatbox'
 
 const socket = io('https://scorechat.herokuapp.com/private')
+// const socket = io('http://localhost:4000/private')
 
 const PrivateRoom = ({ roomId }) => {
-  socket.connect()
-  // disconnects socket when user leaves Private Room
-  useEffect(() => () => socket.disconnect(), [])
-
   const [chat, setChat] = useState({ you: '', conversation: [] })
   const [realChat, setRealChat] = useState({ you: '', conversation: [] })
 
