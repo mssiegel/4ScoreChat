@@ -10,8 +10,11 @@ const socket = io('https://scorechat.herokuapp.com/')
 // const socket = io('http://localhost:4000')
 
 const Chatroom = () => {
-  // automatically ends chat when user leaves Chatroom Page
-  useEffect(() => () => socket.emit('end chat'), [])
+  // automatically disconnects socket when user leaves chatroom
+  useEffect(() => {
+    socket.connect()
+    return () => socket.disconnect()
+  }, [])
 
   const tips = [
     'feel free to EXAGGERATE your words by using capital letters',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import io from 'socket.io-client'
 
 import './PrivateRoom.css'
@@ -11,6 +11,12 @@ const socket = io('https://scorechat.herokuapp.com/private')
 const PrivateRoom = ({ roomId }) => {
   const [chat, setChat] = useState({ you: '', conversation: [] })
   const [realChat, setRealChat] = useState({ you: '', conversation: [] })
+
+  // automatically disconnects socket when user leaves private room
+  useEffect(() => {
+    socket.connect()
+    return () => socket.disconnect()
+  }, [])
 
   return (
     <section className='white'>
