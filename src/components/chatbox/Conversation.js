@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import Filter from 'bad-words';
 import './Conversation.css'
+
+function filterWords(words) {
+  const filter = new Filter();
+  try {
+    return filter.clean(words);
+    // the filter throws an error if the string only has non-letter characters
+  } catch (e) {
+    return words;
+  }
+}
 
 const Conversation = ({ chat, realChat, improvMode, sampleOnly }) => {
   const [originalChar, setOriginalChar] = useState('')
@@ -40,7 +51,7 @@ const Conversation = ({ chat, realChat, improvMode, sampleOnly }) => {
       {conversation.map(([person, character, message], i) => (
         <p key={i}>
           <span className={person}>{character}: </span>
-          <span className='chat-text'>{message}</span>
+          <span className='chat-text'>{filterWords(message)}</span>
         </p>
       ))}
     </div>
